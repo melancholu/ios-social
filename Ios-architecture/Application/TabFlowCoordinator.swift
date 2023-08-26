@@ -65,7 +65,8 @@ final class TabFlowCoordinator: NSObject, Coordinator {
             let feedListVC = FeedListViewController.create(with: viewModel)
             navController.pushViewController(feedListVC, animated: true)
         case .user:
-            let userListVC = UserListViewController.create()
+            let viewModel = tabDIContainer.makeUserListViewModel()
+            let userListVC = UserListViewController.create(with: viewModel)
             navController.pushViewController(userListVC, animated: true)
         case .setting:
             let settingVC = SettingViewController.create()

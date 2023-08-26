@@ -75,5 +75,4 @@ final class FeedListViewModel: BaseViewModel {
     func isLoading() -> Bool {
         return loading != .loading
     }
-
 }

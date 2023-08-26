@@ -12,10 +12,12 @@ final class AppDIContainer {
     lazy var appConfiguration = AppConfiguration()
 
     lazy var feedRepository: FeedRepository = FeedRepository()
+    lazy var userRepository: UserRepository = UserRepository()
 
     func makeTabDIContainer() -> TabDIContainer {
         let dependencies = TabDIContainer.Dependencies(
-            feedRepository: feedRepository
+            feedRepository: feedRepository,
+            userRepository: userRepository
         )
 
         return TabDIContainer(dependencies: dependencies)
