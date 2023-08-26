@@ -21,6 +21,8 @@ class FeedListViewController: BaseViewController {
     }
 
     override func setViews() {
+        super.setViews()
+
         tableView.register(UINib(nibName: FeedCell.identifier, bundle: nil), forCellReuseIdentifier: FeedCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
@@ -29,6 +31,8 @@ class FeedListViewController: BaseViewController {
     }
 
     override func setBindings() {
+        super.setBindings()
+
         viewModel.$feeds
             .receive(on: RunLoop.main)
             .sink(receiveValue: { [weak self] _ in

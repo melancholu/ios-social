@@ -32,6 +32,13 @@
 		AC56EAA32A99EE4D00FD2466 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAA22A99EE4D00FD2466 /* Constant.swift */; };
 		AC56EAA82A99F01800FD2466 /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAA72A99F01800FD2466 /* Loading.swift */; };
 		AC56EAAA2A99FAB900FD2466 /* TabDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAA92A99FAB900FD2466 /* TabDIContainer.swift */; };
+		AC56EAAC2A9A1C4B00FD2466 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAAB2A9A1C4A00FD2466 /* User.swift */; };
+		AC56EAAE2A9A1CD200FD2466 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAAD2A9A1CD200FD2466 /* UserAPI.swift */; };
+		AC56EAB02A9A1D9600FD2466 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAAF2A9A1D9600FD2466 /* UserRepositoryProtocol.swift */; };
+		AC56EAB22A9A1DC000FD2466 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAB12A9A1DC000FD2466 /* UserUseCase.swift */; };
+		AC56EAB42A9A1DDA00FD2466 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */; };
+		AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAB52A9A266C00FD2466 /* UserCell.swift */; };
+		AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC56EAB72A9A267700FD2466 /* UserCell.xib */; };
 		AC804AE22A5AA2F9004EB4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC804AE12A5AA2F9004EB4F2 /* AppDelegate.swift */; };
 		AC804AE62A5AA2F9004EB4F2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC804AE52A5AA2F9004EB4F2 /* UserDetailViewController.swift */; };
 		AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC804AEA2A5AA2FD004EB4F2 /* Assets.xcassets */; };
@@ -104,6 +111,13 @@
 		AC56EAA22A99EE4D00FD2466 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		AC56EAA72A99F01800FD2466 /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
 		AC56EAA92A99FAB900FD2466 /* TabDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDIContainer.swift; sourceTree = "<group>"; };
+		AC56EAAB2A9A1C4A00FD2466 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		AC56EAAD2A9A1CD200FD2466 /* UserAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
+		AC56EAAF2A9A1D9600FD2466 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AC56EAB12A9A1DC000FD2466 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
+		AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		AC56EAB52A9A266C00FD2466 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		AC56EAB72A9A267700FD2466 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		AC804ADE2A5AA2F9004EB4F2 /* Ios-architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios-architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC804AE12A5AA2F9004EB4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC804AE52A5AA2F9004EB4F2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -391,6 +405,7 @@
 			children = (
 				ACE5AFB52A90ADF20097306F /* Feed.swift */,
 				AC56EA9C2A99C62400FD2466 /* Pagination.swift */,
+				AC56EAAB2A9A1C4A00FD2466 /* User.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -399,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				AC804B1C2A5AAB5B004EB4F2 /* FeedRepositoryProtocol.swift */,
+				AC56EAAF2A9A1D9600FD2466 /* UserRepositoryProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -407,6 +423,7 @@
 			isa = PBXGroup;
 			children = (
 				AC56EA9E2A99CE6500FD2466 /* FeedUseCase.swift */,
+				AC56EAB12A9A1DC000FD2466 /* UserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -434,6 +451,7 @@
 			isa = PBXGroup;
 			children = (
 				AC804B262A5AAF9B004EB4F2 /* FeedRepository.swift */,
+				AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -442,6 +460,7 @@
 			isa = PBXGroup;
 			children = (
 				ACE5AFB82A90B77D0097306F /* FeedAPI.swift */,
+				AC56EAAD2A9A1CD200FD2466 /* UserAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -469,6 +488,8 @@
 			children = (
 				ACF84E1B2A86D3E9000922DA /* FeedCell.swift */,
 				ACF84E1D2A86D3F4000922DA /* FeedCell.xib */,
+				AC56EAB52A9A266C00FD2466 /* UserCell.swift */,
+				AC56EAB72A9A267700FD2466 /* UserCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -611,6 +632,7 @@
 				AC5148772A83CA3A00D110B1 /* UserDetailViewController.storyboard in Resources */,
 				ACF84E1E2A86D3F4000922DA /* FeedCell.xib in Resources */,
 				AC5148612A83C75800D110B1 /* UserListViewController.storyboard in Resources */,
+				AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */,
 				ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */,
 				AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */,
 				AC5148692A83C7C900D110B1 /* FeedListViewController.storyboard in Resources */,
@@ -773,10 +795,13 @@
 				ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */,
 				AC56EAA32A99EE4D00FD2466 /* Constant.swift in Sources */,
 				AC5148652A83C79400D110B1 /* SettingViewController.swift in Sources */,
+				AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */,
 				AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */,
 				AC4A48C82A750F21005541B9 /* Coordinator.swift in Sources */,
+				AC56EAB02A9A1D9600FD2466 /* UserRepositoryProtocol.swift in Sources */,
 				ACF84E162A86C672000922DA /* UIImage.swift in Sources */,
 				ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */,
+				AC56EAAC2A9A1C4B00FD2466 /* User.swift in Sources */,
 				AC51485F2A83C39B00D110B1 /* UserListViewModel.swift in Sources */,
 				AC56EAAA2A99FAB900FD2466 /* TabDIContainer.swift in Sources */,
 				AC4A48BE2A7509B8005541B9 /* AppFlowCoordinator.swift in Sources */,
@@ -787,12 +812,15 @@
 				ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */,
 				AC4A48C12A750A1A005541B9 /* AppDIContainer.swift in Sources */,
 				ACE5AFC02A90E4700097306F /* BaseViewModel.swift in Sources */,
+				AC56EAAE2A9A1CD200FD2466 /* UserAPI.swift in Sources */,
 				AC56EAA12A99E62A00FD2466 /* OSLog.swift in Sources */,
 				ACF84E1C2A86D3E9000922DA /* FeedCell.swift in Sources */,
+				AC56EAB22A9A1DC000FD2466 /* UserUseCase.swift in Sources */,
 				AC51486D2A83C7DA00D110B1 /* FeedListViewModel.swift in Sources */,
 				AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */,
 				ACF84E182A86C774000922DA /* UIColor.swift in Sources */,
 				AC51486B2A83C7D300D110B1 /* FeedListViewController.swift in Sources */,
+				AC56EAB42A9A1DDA00FD2466 /* UserRepository.swift in Sources */,
 				AC804AE62A5AA2F9004EB4F2 /* UserDetailViewController.swift in Sources */,
 				ACA3A7F72A7A8CB50056E415 /* TabBarPage.swift in Sources */,
 				AC804AE22A5AA2F9004EB4F2 /* AppDelegate.swift in Sources */,

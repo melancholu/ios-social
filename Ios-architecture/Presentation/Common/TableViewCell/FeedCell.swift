@@ -15,6 +15,8 @@ class FeedCell: BaseTableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
 
     override func initView() {
+        super.initView()
+
         self.profileImageView.image = nil
         self.nameLabel.text = ""
         self.createdLabel.text = ""
