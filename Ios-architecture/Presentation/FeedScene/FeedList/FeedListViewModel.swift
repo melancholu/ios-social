@@ -8,16 +8,23 @@
 import Foundation
 import Combine
 
+struct FeedListViewModelActions {
+    let showCreateFeedVC: () -> Void
+}
+
 final class FeedListViewModel: BaseViewModel {
 
     private let feedUseCase: FeedUseCase
+    private let actions: FeedListViewModelActions
+
     @Published private(set) var feeds: [Feed]
     private var nextPage: Int
     private var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(feedUseCase: FeedUseCase) {
+    init(feedUseCase: FeedUseCase, actions: FeedListViewModelActions) {
         self.feedUseCase = feedUseCase
+        self.actions = actions
         self.feeds = []
         self.nextPage = -1
         self.loading = .idle
@@ -74,5 +81,9 @@ final class FeedListViewModel: BaseViewModel {
 
     func isLoading() -> Bool {
         return loading != .loading
+    }
+
+    func showCreateFeedVC() {
+        actions.showCreateFeedVC()
     }
 }

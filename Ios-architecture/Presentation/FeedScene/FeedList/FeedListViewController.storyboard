@@ -22,12 +22,28 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abD-Ht-EP7">
+                                <rect key="frame" x="354" y="802" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="IQm-z2-dZ6"/>
+                                    <constraint firstAttribute="height" constant="36" id="WWQ-mI-7jc"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="icCreate">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
+                                </state>
+                                <connections>
+                                    <action selector="onClickCreateFeed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="uYM-dn-Vfg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xXp-GQ-SvU" secondAttribute="trailing" id="5qx-Co-jwO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="xXp-GQ-SvU" secondAttribute="bottom" id="MWe-lE-bZA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="abD-Ht-EP7" secondAttribute="trailing" constant="24" id="Z6b-Qh-eI1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="abD-Ht-EP7" secondAttribute="bottom" constant="24" id="dHt-Iv-md2"/>
                             <constraint firstItem="xXp-GQ-SvU" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="k8M-Ye-aDZ"/>
                             <constraint firstItem="xXp-GQ-SvU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="sew-JV-6a7"/>
                         </constraints>
@@ -42,6 +58,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icCreate" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

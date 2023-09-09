@@ -10,6 +10,11 @@
 		4D52C1947B82FD9C2ACC5B93 /* Pods_Ios_architecture_Ios_architectureUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F51A13B7BBAE3C984B92B8 /* Pods_Ios_architecture_Ios_architectureUITests.framework */; };
 		75EA6DB19AE07B012C8824FE /* Pods_Ios_architectureTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D59E4ADF3106655B3732A065 /* Pods_Ios_architectureTests.framework */; };
 		8C1C1905105192C0DC85A565 /* Pods_Ios_architecture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84931E13A46B17867BE395A3 /* Pods_Ios_architecture.framework */; };
+		AC083DFB2AA3164100743E58 /* CreateFeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC083DFA2AA3164100743E58 /* CreateFeedViewController.storyboard */; };
+		AC083DFD2AA3172400743E58 /* CreateFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC083DFC2AA3172400743E58 /* CreateFeedViewController.swift */; };
+		AC083DFF2AA3172C00743E58 /* CreateFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC083DFE2AA3172C00743E58 /* CreateFeedViewModel.swift */; };
+		AC083E022AA330BC00743E58 /* FeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC083E012AA330BC00743E58 /* FeedFlowCoordinator.swift */; };
+		AC083E042AA334C000743E58 /* FeedDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC083E032AA334C000743E58 /* FeedDIContainer.swift */; };
 		AC4A48BE2A7509B8005541B9 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A48BD2A7509B8005541B9 /* AppFlowCoordinator.swift */; };
 		AC4A48C12A750A1A005541B9 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A48C02A750A1A005541B9 /* AppDIContainer.swift */; };
 		AC4A48C32A750A36005541B9 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4A48C22A750A36005541B9 /* AppConfiguration.swift */; };
@@ -39,6 +44,8 @@
 		AC56EAB42A9A1DDA00FD2466 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */; };
 		AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAB52A9A266C00FD2466 /* UserCell.swift */; };
 		AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC56EAB72A9A267700FD2466 /* UserCell.xib */; };
+		AC77565F2AA355F90043F59E /* PrimaryButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC77565E2AA355F90043F59E /* PrimaryButton.xib */; };
+		AC7756612AA356700043F59E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7756602AA356700043F59E /* PrimaryButton.swift */; };
 		AC804AE22A5AA2F9004EB4F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC804AE12A5AA2F9004EB4F2 /* AppDelegate.swift */; };
 		AC804AE62A5AA2F9004EB4F2 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC804AE52A5AA2F9004EB4F2 /* UserDetailViewController.swift */; };
 		AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC804AEA2A5AA2FD004EB4F2 /* Assets.xcassets */; };
@@ -90,6 +97,11 @@
 		7546982F6C012C5B737A6269 /* Pods-Ios-architecture-Ios-architectureUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios-architecture-Ios-architectureUITests.debug.xcconfig"; path = "Target Support Files/Pods-Ios-architecture-Ios-architectureUITests/Pods-Ios-architecture-Ios-architectureUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		75C2282BE887A38E32393E92 /* Pods-Ios-architectureTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ios-architectureTests.debug.xcconfig"; path = "Target Support Files/Pods-Ios-architectureTests/Pods-Ios-architectureTests.debug.xcconfig"; sourceTree = "<group>"; };
 		84931E13A46B17867BE395A3 /* Pods_Ios_architecture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ios_architecture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC083DFA2AA3164100743E58 /* CreateFeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateFeedViewController.storyboard; sourceTree = "<group>"; };
+		AC083DFC2AA3172400743E58 /* CreateFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedViewController.swift; sourceTree = "<group>"; };
+		AC083DFE2AA3172C00743E58 /* CreateFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedViewModel.swift; sourceTree = "<group>"; };
+		AC083E012AA330BC00743E58 /* FeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFlowCoordinator.swift; sourceTree = "<group>"; };
+		AC083E032AA334C000743E58 /* FeedDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDIContainer.swift; sourceTree = "<group>"; };
 		AC4A48BD2A7509B8005541B9 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		AC4A48C02A750A1A005541B9 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		AC4A48C22A750A36005541B9 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
@@ -118,6 +130,8 @@
 		AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		AC56EAB52A9A266C00FD2466 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		AC56EAB72A9A267700FD2466 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		AC77565E2AA355F90043F59E /* PrimaryButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrimaryButton.xib; sourceTree = "<group>"; };
+		AC7756602AA356700043F59E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		AC804ADE2A5AA2F9004EB4F2 /* Ios-architecture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ios-architecture.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC804AE12A5AA2F9004EB4F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC804AE52A5AA2F9004EB4F2 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -195,11 +209,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AC083DF32AA3136B00743E58 /* CreateFeed */ = {
+			isa = PBXGroup;
+			children = (
+				AC083DFA2AA3164100743E58 /* CreateFeedViewController.storyboard */,
+				AC083DFC2AA3172400743E58 /* CreateFeedViewController.swift */,
+				AC083DFE2AA3172C00743E58 /* CreateFeedViewModel.swift */,
+			);
+			path = CreateFeed;
+			sourceTree = "<group>";
+		};
+		AC083E002AA3309B00743E58 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				AC083E012AA330BC00743E58 /* FeedFlowCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
 		AC4A48BF2A750A0A005541B9 /* DIContainer */ = {
 			isa = PBXGroup;
 			children = (
 				AC4A48C02A750A1A005541B9 /* AppDIContainer.swift */,
 				AC56EAA92A99FAB900FD2466 /* TabDIContainer.swift */,
+				AC083E032AA334C000743E58 /* FeedDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -207,6 +240,8 @@
 		AC5148532A83C2F800D110B1 /* FeedScene */ = {
 			isa = PBXGroup;
 			children = (
+				AC083E002AA3309B00743E58 /* Flow */,
+				AC083DF32AA3136B00743E58 /* CreateFeed */,
 				AC5148562A83C31700D110B1 /* FeedList */,
 			);
 			path = FeedScene;
@@ -270,6 +305,15 @@
 				ACA3A7F62A7A8CB50056E415 /* TabBarPage.swift */,
 			);
 			path = enum;
+			sourceTree = "<group>";
+		};
+		AC77565D2AA355B80043F59E /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				AC77565E2AA355F90043F59E /* PrimaryButton.xib */,
+				AC7756602AA356700043F59E /* PrimaryButton.swift */,
+			);
+			path = Button;
 			sourceTree = "<group>";
 		};
 		AC804AD52A5AA2F9004EB4F2 = {
@@ -478,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				ACF84E1F2A86D845000922DA /* Base */,
+				AC77565D2AA355B80043F59E /* Button */,
 				ACF84E1A2A86D3DE000922DA /* TableViewCell */,
 			);
 			path = Common;
@@ -636,6 +681,8 @@
 				ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */,
 				AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */,
 				AC5148692A83C7C900D110B1 /* FeedListViewController.storyboard in Resources */,
+				AC083DFB2AA3164100743E58 /* CreateFeedViewController.storyboard in Resources */,
+				AC77565F2AA355F90043F59E /* PrimaryButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +836,7 @@
 				AC56EA9F2A99CE6500FD2466 /* FeedUseCase.swift in Sources */,
 				ACF84E232A86D9B5000922DA /* BaseViewController.swift in Sources */,
 				ACA3A7F52A7A8C060056E415 /* TabFlowCoordinator.swift in Sources */,
+				AC083DFD2AA3172400743E58 /* CreateFeedViewController.swift in Sources */,
 				AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */,
 				AC804B242A5AAD4E004EB4F2 /* UserDetailViewModel.swift in Sources */,
 				AC56EAA82A99F01800FD2466 /* Loading.swift in Sources */,
@@ -805,12 +853,16 @@
 				AC51485F2A83C39B00D110B1 /* UserListViewModel.swift in Sources */,
 				AC56EAAA2A99FAB900FD2466 /* TabDIContainer.swift in Sources */,
 				AC4A48BE2A7509B8005541B9 /* AppFlowCoordinator.swift in Sources */,
+				AC083DFF2AA3172C00743E58 /* CreateFeedViewModel.swift in Sources */,
+				AC083E022AA330BC00743E58 /* FeedFlowCoordinator.swift in Sources */,
 				AC4A48C52A750A5C005541B9 /* AppAppearance.swift in Sources */,
 				AC56EA9D2A99C62400FD2466 /* Pagination.swift in Sources */,
 				ACF84E212A86D853000922DA /* BaseTableViewCell.swift in Sources */,
+				AC7756612AA356700043F59E /* PrimaryButton.swift in Sources */,
 				ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */,
 				ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */,
 				AC4A48C12A750A1A005541B9 /* AppDIContainer.swift in Sources */,
+				AC083E042AA334C000743E58 /* FeedDIContainer.swift in Sources */,
 				ACE5AFC02A90E4700097306F /* BaseViewModel.swift in Sources */,
 				AC56EAAE2A9A1CD200FD2466 /* UserAPI.swift in Sources */,
 				AC56EAA12A99E62A00FD2466 /* OSLog.swift in Sources */,

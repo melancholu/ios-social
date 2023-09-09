@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Create Feed View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CreateFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="CreateFeedViewController" customModule="Ios_architecture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wpf-Yj-osE">
+                                <rect key="frame" x="16" y="75" width="361" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" name="black"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3J-Uy-eFO">
+                                <rect key="frame" x="16" y="766" width="176.66666666666666" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="aZi-mZ-Kgw"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rxU-Ra-iNa" customClass="PrimaryButton" customModule="Ios_architecture" customModuleProvider="target">
+                                <rect key="frame" x="200.66666666666663" y="766" width="176.33333333333337" height="36"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="p77-s9-V8H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wpf-Yj-osE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="08R-0x-NTN"/>
+                            <constraint firstItem="wpf-Yj-osE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="1o4-v2-8eX"/>
+                            <constraint firstAttribute="trailing" secondItem="rxU-Ra-iNa" secondAttribute="trailing" constant="16" id="8Cj-ss-rlg"/>
+                            <constraint firstItem="g3J-Uy-eFO" firstAttribute="top" secondItem="wpf-Yj-osE" secondAttribute="bottom" constant="16" id="IQq-bX-TFm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wpf-Yj-osE" secondAttribute="trailing" constant="16" id="Jst-wK-212"/>
+                            <constraint firstItem="g3J-Uy-eFO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="NhN-L9-aip"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="g3J-Uy-eFO" secondAttribute="bottom" constant="16" id="P0A-0S-As5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="rxU-Ra-iNa" secondAttribute="bottom" constant="16" id="RVF-XX-PM5"/>
+                            <constraint firstItem="rxU-Ra-iNa" firstAttribute="width" secondItem="g3J-Uy-eFO" secondAttribute="width" id="gLC-ZR-tis"/>
+                            <constraint firstItem="rxU-Ra-iNa" firstAttribute="centerY" secondItem="g3J-Uy-eFO" secondAttribute="centerY" id="pp2-cD-3ze"/>
+                            <constraint firstItem="rxU-Ra-iNa" firstAttribute="leading" secondItem="g3J-Uy-eFO" secondAttribute="trailing" constant="8" id="s8F-zD-lpZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="postButton" destination="rxU-Ra-iNa" id="rFR-Y3-fQ1"/>
+                        <outlet property="textView" destination="wpf-Yj-osE" id="Vfz-T5-eGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="11.450381679389313" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -26,6 +26,7 @@ class FeedListViewController: BaseViewController {
         tableView.register(UINib(nibName: FeedCell.identifier, bundle: nil), forCellReuseIdentifier: FeedCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.allowsSelection = false
 
         viewModel.getFeeds()
     }
@@ -39,6 +40,10 @@ class FeedListViewController: BaseViewController {
                 self?.tableView.reloadData()
             })
             .store(in: &subscriptions)
+    }
+
+    @IBAction func onClickCreateFeed(_ sender: Any) {
+        viewModel.showCreateFeedVC()
     }
 }
 

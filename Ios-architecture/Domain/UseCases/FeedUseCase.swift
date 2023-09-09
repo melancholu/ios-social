@@ -16,6 +16,10 @@ final class FeedUseCase {
         self.feedRepository = feedRepository
     }
 
+    func createFeed(_ feed: Feed) -> AnyPublisher<Feed, Error> {
+        return feedRepository.createFeed(feed)
+    }
+
     func getFeeds(_ page: Int) -> AnyPublisher<Pagination<[Feed]>, Error> {
         return feedRepository.getFeeds(page)
     }
