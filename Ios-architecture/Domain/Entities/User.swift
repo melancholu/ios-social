@@ -5,7 +5,7 @@
 //  Created by song dong hyeok on 2023/08/26.
 //
 
-struct User: Identifiable, Codable {
+struct User: Codable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case name
@@ -14,12 +14,35 @@ struct User: Identifiable, Codable {
         case imageUrl
     }
 
-    typealias Identifier = String
-
-    var id: Identifier { uuid }
-    let uuid: String
+    let uuid: String?
     let name: String
     let email: String
-    let created: String
+    let created: String?
     let imageUrl: String?
+
+    init(name: String, email: String) {
+        self.uuid = nil
+        self.name = name
+        self.email = email
+        self.created = nil
+        self.imageUrl = nil
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        uuid = (try? container.decodeIfPresent(String.self, forKey: .uuid))
+        name = (try? container.decodeIfPresent(String.self, forKey: .name))!
+        email = (try? container.decodeIfPresent(String.self, forKey: .email))!
+        created = (try? container.decodeIfPresent(String.self, forKey: .created))
+        imageUrl = (try? container.decodeIfPresent(String.self, forKey: .imageUrl))
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encodeIfPresent(uuid, forKey: .uuid)
+        try container.encodeIfPresent(name, forKey: .name)
+        try container.encodeIfPresent(email, forKey: .email)
+        try container.encodeIfPresent(created, forKey: .created)
+        try container.encodeIfPresent(imageUrl, forKey: .imageUrl)
+    }
 }

@@ -24,8 +24,9 @@ class FeedCell: BaseTableViewCell {
     }
 
     func display(feed: Feed) {
+        print(feed)
         self.profileImageView.image = UIImage(named: "icUser")
-        self.nameLabel.text = "name"
+        self.nameLabel.text = feed.user?.name ?? ""
         self.createdLabel.text = feed.created
         self.contentLabel.text = feed.content
     }

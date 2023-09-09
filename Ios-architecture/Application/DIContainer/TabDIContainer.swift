@@ -20,22 +20,21 @@ final class TabDIContainer {
         self.dependencies = dependencies
     }
 
-    // MARK: - UseCase
-    func makeFeedUseCase() -> FeedUseCase {
-        return FeedUseCase(feedRepository: dependencies.feedRepository)
+    // MARK: - DIContainer
+    func makeFeedDIContainer() -> FeedDIContainer {
+        let dependencies = FeedDIContainer.Dependencies(
+            feedRepository: dependencies.feedRepository
+        )
+
+        return FeedDIContainer(dependencies: dependencies)
     }
 
+    // MARK: - UseCase
     func makeUserUseCase() -> UserUseCase {
         return UserUseCase(userRepository: dependencies.userRepository)
     }
 
     // MARK: - ViewModel
-    func makeFeedListViewModel() -> FeedListViewModel {
-        let feedUseCase = makeFeedUseCase()
-
-        return FeedListViewModel(feedUseCase: feedUseCase)
-    }
-
     func makeUserListViewModel() -> UserListViewModel {
         let userUseCase = makeUserUseCase()
 
