@@ -58,9 +58,23 @@
 		AC9C397D2A87A9F9004C8B4A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C397C2A87A9F9004C8B4A /* String.swift */; };
 		AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */; };
 		AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */; };
+		AC9F179E2AC6EAE300487038 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F179D2AC6EAE300487038 /* AuthAPI.swift */; };
+		AC9F17A02AC6EAEA00487038 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F179F2AC6EAEA00487038 /* AuthRepository.swift */; };
+		AC9F17A22AC6EC2A00487038 /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F17A12AC6EC2A00487038 /* AuthRepositoryProtocol.swift */; };
+		AC9F17A42AC6EE2C00487038 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F17A32AC6EE2C00487038 /* Token.swift */; };
 		ACA3A7F52A7A8C060056E415 /* TabFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3A7F42A7A8C060056E415 /* TabFlowCoordinator.swift */; };
 		ACA3A7F72A7A8CB50056E415 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3A7F62A7A8CB50056E415 /* TabBarPage.swift */; };
 		ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB028082A7E358E0010AD86 /* Instantiable.swift */; };
+		ACCC53BB2AAC70E6002081F2 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */; };
+		ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */; };
+		ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */; };
+		ACCC53C12AAC7113002081F2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C02AAC7113002081F2 /* LoginViewModel.swift */; };
+		ACCC53C32AAC711B002081F2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C22AAC711B002081F2 /* SignUpViewController.swift */; };
+		ACCC53C52AAC7123002081F2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C42AAC7123002081F2 /* SignUpViewModel.swift */; };
+		ACCC53C72AAC734F002081F2 /* AuthDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C62AAC734F002081F2 /* AuthDIContainer.swift */; };
+		ACCC53C92AAC7360002081F2 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C82AAC7360002081F2 /* AuthFlowCoordinator.swift */; };
+		ACCC53CE2AAC773A002081F2 /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */; };
+		ACCC53D02AAC7B63002081F2 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */; };
 		ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
 		ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB82A90B77D0097306F /* FeedAPI.swift */; };
 		ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFBD2A90BEDA0097306F /* Env.swift */; };
@@ -149,9 +163,23 @@
 		AC9C397C2A87A9F9004C8B4A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptor.swift; sourceTree = "<group>"; };
 		AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
+		AC9F179D2AC6EAE300487038 /* AuthAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPI.swift; sourceTree = "<group>"; };
+		AC9F179F2AC6EAEA00487038 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
+		AC9F17A12AC6EC2A00487038 /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
+		AC9F17A32AC6EE2C00487038 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		ACA3A7F42A7A8C060056E415 /* TabFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFlowCoordinator.swift; sourceTree = "<group>"; };
 		ACA3A7F62A7A8CB50056E415 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		ACB028082A7E358E0010AD86 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
+		ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
+		ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
+		ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		ACCC53C02AAC7113002081F2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		ACCC53C22AAC711B002081F2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		ACCC53C42AAC7123002081F2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		ACCC53C62AAC734F002081F2 /* AuthDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDIContainer.swift; sourceTree = "<group>"; };
+		ACCC53C82AAC7360002081F2 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
+		ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorage.swift; sourceTree = "<group>"; };
+		ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		ACE5AFB52A90ADF20097306F /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		ACE5AFB82A90B77D0097306F /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
 		ACE5AFBB2A90BC0E0097306F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -231,8 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				AC4A48C02A750A1A005541B9 /* AppDIContainer.swift */,
-				AC56EAA92A99FAB900FD2466 /* TabDIContainer.swift */,
+				ACCC53C62AAC734F002081F2 /* AuthDIContainer.swift */,
 				AC083E032AA334C000743E58 /* FeedDIContainer.swift */,
+				AC56EAA92A99FAB900FD2466 /* TabDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -406,6 +435,7 @@
 			children = (
 				ACE5AFB72A90AE100097306F /* Network */,
 				AC804B252A5AAF8D004EB4F2 /* Repositories */,
+				ACCC53CC2AAC770E002081F2 /* Storages */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -423,6 +453,7 @@
 		AC804B162A5AA907004EB4F2 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACCC53D12AAC91B7002081F2 /* AuthScene */,
 				ACF84E192A86D3D9000922DA /* Common */,
 				AC5148532A83C2F800D110B1 /* FeedScene */,
 				AC5148542A83C2FF00D110B1 /* SettingScene */,
@@ -449,6 +480,7 @@
 			children = (
 				ACE5AFB52A90ADF20097306F /* Feed.swift */,
 				AC56EA9C2A99C62400FD2466 /* Pagination.swift */,
+				AC9F17A32AC6EE2C00487038 /* Token.swift */,
 				AC56EAAB2A9A1C4A00FD2466 /* User.swift */,
 			);
 			path = Entities;
@@ -457,6 +489,7 @@
 		AC804B1B2A5AAB3F004EB4F2 /* Interfaces */ = {
 			isa = PBXGroup;
 			children = (
+				AC9F17A12AC6EC2A00487038 /* AuthRepositoryProtocol.swift */,
 				AC804B1C2A5AAB5B004EB4F2 /* FeedRepositoryProtocol.swift */,
 				AC56EAAF2A9A1D9600FD2466 /* UserRepositoryProtocol.swift */,
 			);
@@ -466,6 +499,7 @@
 		AC804B202A5AAC86004EB4F2 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */,
 				AC56EA9E2A99CE6500FD2466 /* FeedUseCase.swift */,
 				AC56EAB12A9A1DC000FD2466 /* UserUseCase.swift */,
 			);
@@ -494,15 +528,63 @@
 		AC804B252A5AAF8D004EB4F2 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				AC9F179F2AC6EAEA00487038 /* AuthRepository.swift */,
 				AC804B262A5AAF9B004EB4F2 /* FeedRepository.swift */,
 				AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		ACCC53B82AAC70B7002081F2 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */,
+				ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */,
+				ACCC53C02AAC7113002081F2 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		ACCC53B92AAC70C6002081F2 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */,
+				ACCC53C22AAC711B002081F2 /* SignUpViewController.swift */,
+				ACCC53C42AAC7123002081F2 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		ACCC53CA2AAC7397002081F2 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC53C82AAC7360002081F2 /* AuthFlowCoordinator.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		ACCC53CC2AAC770E002081F2 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		ACCC53D12AAC91B7002081F2 /* AuthScene */ = {
+			isa = PBXGroup;
+			children = (
+				ACCC53CA2AAC7397002081F2 /* Flow */,
+				ACCC53B82AAC70B7002081F2 /* Login */,
+				ACCC53B92AAC70C6002081F2 /* SignUp */,
+			);
+			path = AuthScene;
+			sourceTree = "<group>";
+		};
 		ACE5AFB72A90AE100097306F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AC9F179D2AC6EAE300487038 /* AuthAPI.swift */,
 				ACE5AFB82A90B77D0097306F /* FeedAPI.swift */,
 				AC56EAAD2A9A1CD200FD2466 /* UserAPI.swift */,
 			);
@@ -677,10 +759,12 @@
 				AC5148772A83CA3A00D110B1 /* UserDetailViewController.storyboard in Resources */,
 				ACF84E1E2A86D3F4000922DA /* FeedCell.xib in Resources */,
 				AC5148612A83C75800D110B1 /* UserListViewController.storyboard in Resources */,
+				ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */,
 				AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */,
 				ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */,
 				AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */,
 				AC5148692A83C7C900D110B1 /* FeedListViewController.storyboard in Resources */,
+				ACCC53BB2AAC70E6002081F2 /* LoginViewController.storyboard in Resources */,
 				AC083DFB2AA3164100743E58 /* CreateFeedViewController.storyboard in Resources */,
 				AC77565F2AA355F90043F59E /* PrimaryButton.xib in Resources */,
 			);
@@ -838,16 +922,20 @@
 				ACA3A7F52A7A8C060056E415 /* TabFlowCoordinator.swift in Sources */,
 				AC083DFD2AA3172400743E58 /* CreateFeedViewController.swift in Sources */,
 				AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */,
+				ACCC53C72AAC734F002081F2 /* AuthDIContainer.swift in Sources */,
 				AC804B242A5AAD4E004EB4F2 /* UserDetailViewModel.swift in Sources */,
 				AC56EAA82A99F01800FD2466 /* Loading.swift in Sources */,
 				ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */,
 				AC56EAA32A99EE4D00FD2466 /* Constant.swift in Sources */,
+				ACCC53C52AAC7123002081F2 /* SignUpViewModel.swift in Sources */,
+				ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */,
 				AC5148652A83C79400D110B1 /* SettingViewController.swift in Sources */,
 				AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */,
 				AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */,
 				AC4A48C82A750F21005541B9 /* Coordinator.swift in Sources */,
 				AC56EAB02A9A1D9600FD2466 /* UserRepositoryProtocol.swift in Sources */,
 				ACF84E162A86C672000922DA /* UIImage.swift in Sources */,
+				ACCC53D02AAC7B63002081F2 /* AuthUseCase.swift in Sources */,
 				ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */,
 				AC56EAAC2A9A1C4B00FD2466 /* User.swift in Sources */,
 				AC51485F2A83C39B00D110B1 /* UserListViewModel.swift in Sources */,
@@ -861,18 +949,26 @@
 				AC7756612AA356700043F59E /* PrimaryButton.swift in Sources */,
 				ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */,
 				ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */,
+				AC9F17A02AC6EAEA00487038 /* AuthRepository.swift in Sources */,
 				AC4A48C12A750A1A005541B9 /* AppDIContainer.swift in Sources */,
 				AC083E042AA334C000743E58 /* FeedDIContainer.swift in Sources */,
 				ACE5AFC02A90E4700097306F /* BaseViewModel.swift in Sources */,
 				AC56EAAE2A9A1CD200FD2466 /* UserAPI.swift in Sources */,
+				ACCC53C12AAC7113002081F2 /* LoginViewModel.swift in Sources */,
+				ACCC53C32AAC711B002081F2 /* SignUpViewController.swift in Sources */,
 				AC56EAA12A99E62A00FD2466 /* OSLog.swift in Sources */,
 				ACF84E1C2A86D3E9000922DA /* FeedCell.swift in Sources */,
+				ACCC53C92AAC7360002081F2 /* AuthFlowCoordinator.swift in Sources */,
 				AC56EAB22A9A1DC000FD2466 /* UserUseCase.swift in Sources */,
+				AC9F17A22AC6EC2A00487038 /* AuthRepositoryProtocol.swift in Sources */,
 				AC51486D2A83C7DA00D110B1 /* FeedListViewModel.swift in Sources */,
 				AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */,
+				AC9F17A42AC6EE2C00487038 /* Token.swift in Sources */,
 				ACF84E182A86C774000922DA /* UIColor.swift in Sources */,
 				AC51486B2A83C7D300D110B1 /* FeedListViewController.swift in Sources */,
 				AC56EAB42A9A1DDA00FD2466 /* UserRepository.swift in Sources */,
+				AC9F179E2AC6EAE300487038 /* AuthAPI.swift in Sources */,
+				ACCC53CE2AAC773A002081F2 /* AuthStorage.swift in Sources */,
 				AC804AE62A5AA2F9004EB4F2 /* UserDetailViewController.swift in Sources */,
 				ACA3A7F72A7A8CB50056E415 /* TabBarPage.swift in Sources */,
 				AC804AE22A5AA2F9004EB4F2 /* AppDelegate.swift in Sources */,

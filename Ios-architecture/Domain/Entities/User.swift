@@ -10,20 +10,23 @@ struct User: Codable {
         case uuid
         case name
         case email
+        case password
         case created
         case imageUrl
     }
 
     let uuid: String?
-    let name: String
-    let email: String
+    let name: String?
+    let email: String?
+    let password: String?
     let created: String?
     let imageUrl: String?
 
-    init(name: String, email: String) {
+    init(name: String?, email: String?, password: String?) {
         self.uuid = nil
         self.name = name
         self.email = email
+        self.password = password
         self.created = nil
         self.imageUrl = nil
     }
@@ -31,8 +34,9 @@ struct User: Codable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         uuid = (try? container.decodeIfPresent(String.self, forKey: .uuid))
-        name = (try? container.decodeIfPresent(String.self, forKey: .name))!
-        email = (try? container.decodeIfPresent(String.self, forKey: .email))!
+        name = (try? container.decodeIfPresent(String.self, forKey: .name))
+        email = (try? container.decodeIfPresent(String.self, forKey: .email))
+        password = (try? container.decodeIfPresent(String.self, forKey: .password))
         created = (try? container.decodeIfPresent(String.self, forKey: .created))
         imageUrl = (try? container.decodeIfPresent(String.self, forKey: .imageUrl))
     }
@@ -42,6 +46,7 @@ struct User: Codable {
         try container.encodeIfPresent(uuid, forKey: .uuid)
         try container.encodeIfPresent(name, forKey: .name)
         try container.encodeIfPresent(email, forKey: .email)
+        try container.encodeIfPresent(password, forKey: .password)
         try container.encodeIfPresent(created, forKey: .created)
         try container.encodeIfPresent(imageUrl, forKey: .imageUrl)
     }

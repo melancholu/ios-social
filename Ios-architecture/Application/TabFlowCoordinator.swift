@@ -50,12 +50,12 @@ final class TabFlowCoordinator: NSObject, Coordinator {
 
     private func getTabController(_ page: TabBarPage) -> UINavigationController {
         let navigationController = UINavigationController()
-//        navigationController.setNavigationBarHidden(true, animated: false)
-//        let backBarButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-//        navigationItem.backBarButtonItem = backBarButton
+        //        navigationController.setNavigationBarHidden(true, animated: false)
+        //        let backBarButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        //        navigationItem.backBarButtonItem = backBarButton
         navigationController.tabBarItem = UITabBarItem.init(title: page.pageTitleValue(),
-                                                     image: page.icon(),
-                                                     tag: page.pageOrderNumber())
+                                                            image: page.icon(),
+                                                            tag: page.pageOrderNumber())
 
         switch page {
         case .feed:
