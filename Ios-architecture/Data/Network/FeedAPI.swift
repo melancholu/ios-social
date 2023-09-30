@@ -41,7 +41,11 @@ extension FeedAPI: TargetType {
     }
 
     var headers: [String: String]? {
-        return [ "Content-type": "application/json"]
+        var defaultHeader = ["Content-type": "application/json"]
+        if let accessToken = AuthStorage.shared.accessToken {
+            defaultHeader["Authorization"] = "Bearer \(accessToken)"
+        }
+        return defaultHeader
     }
 
     var validationType: ValidationType {

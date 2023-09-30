@@ -13,7 +13,7 @@ class NetworkPlugin: PluginType {
         switch result {
         case .success(let body):
             if let json = try? JSONSerialization.jsonObject(with: body.data, options: .mutableContainers) {
-//                Log.network(json)
+                //                Log.network(json)
             }
         case .failure(_):
             break

@@ -29,7 +29,7 @@ class PrimaryButton: UIButton {
         let nib = UINib(nibName: PrimaryButton.identifier, bundle: nil)
 
         guard let view = nib.instantiate(withOwner: self, options: nil).first as?
-                            UIView else {fatalError("Unable to convert nib")}
+                UIView else {fatalError("Unable to convert nib")}
 
         view.frame = bounds
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
