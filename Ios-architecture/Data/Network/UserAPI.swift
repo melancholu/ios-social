@@ -14,11 +14,7 @@ enum UserAPI {
     case signUp(user: User)
 }
 
-extension UserAPI: TargetType {
-    var baseURL: URL {
-        URL(string: Env.baseURL)!
-    }
-
+extension UserAPI: BaseAPI {
     var path: String {
         switch self {
         case .getMe: return "/user/me"
@@ -48,17 +44,5 @@ extension UserAPI: TargetType {
         case let .signUp(user):
             return .requestJSONEncodable(user)
         }
-    }
-
-    var headers: [String: String]? {
-        var defaultHeader = ["Content-type": "application/json"]
-        if let accessToken = AuthStorage.shared.accessToken {
-            defaultHeader["Authorization"] = "Bearer \(accessToken)"
-        }
-        return defaultHeader
-    }
-
-    var validationType: ValidationType {
-        return .successCodes
     }
 }

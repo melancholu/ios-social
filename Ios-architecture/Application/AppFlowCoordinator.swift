@@ -21,6 +21,8 @@ final class AppFlowCoordinator: Coordinator, AppFlowDelegate {
         self.window = window
         self.rootViewController = UINavigationController()
         self.appDIContainer = AppDIContainer()
+
+        NetworkInterceptor.shared.delegate = self
     }
 
     func start() {

@@ -9,9 +9,7 @@ import Foundation
 import Moya
 import Combine
 
-final class FeedRepository: FeedRepositoryProtocol {
-    private let provider = MoyaProvider<FeedAPI>(session: Session(interceptor: NetworkInterceptor()), plugins: [NetworkPlugin()])
-
+final class FeedRepository: BaseRepository<FeedAPI>, FeedRepositoryProtocol {
     func createFeed(_ feed: Feed) -> AnyPublisher<Feed, Error> {
         return provider.requestPublisher(.createFeed(feed: feed)).tryMap { response in
             let decodedData = try response.map(Feed.self)

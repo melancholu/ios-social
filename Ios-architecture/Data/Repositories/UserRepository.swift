@@ -9,9 +9,7 @@ import Foundation
 import Moya
 import Combine
 
-final class UserRepository: UserRepositoryProtocol {
-    private let provider = MoyaProvider<UserAPI>(plugins: [NetworkPlugin()])
-
+final class UserRepository: BaseRepository<UserAPI>, UserRepositoryProtocol {
     func getMe() -> AnyPublisher<User, Error> {
         return provider.requestPublisher(.getMe).tryMap { response in
             let decodedData = try response.map(User.self)

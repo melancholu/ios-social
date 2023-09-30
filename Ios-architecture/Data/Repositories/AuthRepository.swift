@@ -9,8 +9,7 @@ import Foundation
 import Moya
 import Combine
 
-final class AuthRepository: AuthRepositoryProtocol {
-    private let provider = MoyaProvider<AuthAPI>(plugins: [NetworkPlugin()])
+final class AuthRepository: BaseRepository<AuthAPI>, AuthRepositoryProtocol {
     private let authStorage: AuthStorage = AuthStorage.shared
 
     func login(user: User) -> AnyPublisher<Token, Error> {
@@ -27,8 +26,8 @@ final class AuthRepository: AuthRepositoryProtocol {
 
     func logout() -> AnyPublisher<Void, Error> {
         return provider.requestPublisher(.logout).tryMap { _ in
-            self.authStorage.setAccessToken(nil)
-            self.authStorage.setRefreshToken(nil)
+            self.authStorage.setToken(nil)
+            self.authStorage.setUser(nil)
         }
         .mapError { error in
             return error
@@ -40,8 +39,7 @@ final class AuthRepository: AuthRepositoryProtocol {
         return provider.requestPublisher(.refresh).tryMap { response in
             let decodedData = try response.map(Token.self)
 
-            self.authStorage.setAccessToken(decodedData.accessToken)
-            self.authStorage.setRefreshToken(decodedData.refreshToken)
+            self.authStorage.setToken(decodedData)
         }
         .mapError { error in
             return error

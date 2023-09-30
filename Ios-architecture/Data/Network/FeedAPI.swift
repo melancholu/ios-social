@@ -12,11 +12,7 @@ enum FeedAPI {
     case getFeeds(page: Int)
 }
 
-extension FeedAPI: TargetType {
-    var baseURL: URL {
-        URL(string: Env.baseURL)!
-    }
-
+extension FeedAPI: BaseAPI {
     var path: String {
         switch self {
         case .createFeed: return "/feed/"
@@ -38,17 +34,5 @@ extension FeedAPI: TargetType {
         case let .getFeeds(page):
             return .requestParameters(parameters: ["page": page], encoding: URLEncoding.queryString)
         }
-    }
-
-    var headers: [String: String]? {
-        var defaultHeader = ["Content-type": "application/json"]
-        if let accessToken = AuthStorage.shared.accessToken {
-            defaultHeader["Authorization"] = "Bearer \(accessToken)"
-        }
-        return defaultHeader
-    }
-
-    var validationType: ValidationType {
-        return .successCodes
     }
 }

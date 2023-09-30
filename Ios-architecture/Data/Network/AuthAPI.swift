@@ -13,7 +13,7 @@ enum AuthAPI {
     case refresh
 }
 
-extension AuthAPI: TargetType {
+extension AuthAPI: BaseAPI {
     var baseURL: URL {
         URL(string: Env.baseURL)!
     }
@@ -43,23 +43,5 @@ extension AuthAPI: TargetType {
         case .refresh:
             return .requestPlain
         }
-    }
-
-    var headers: [String: String]? {
-        var defaultHeader = ["Content-type": "application/json"]
-
-        switch self {
-        case .login:
-            return defaultHeader
-        case .logout, .refresh:
-            if let accessToken = AuthStorage.shared.accessToken {
-                defaultHeader["Authorization"] = "Bearer \(accessToken)"
-            }
-            return defaultHeader
-        }
-    }
-
-    var validationType: ValidationType {
-        return .successCodes
     }
 }

@@ -8,7 +8,9 @@
 import Foundation
 import Moya
 
-class NetworkPlugin: PluginType {
+final class NetworkPlugin: PluginType {
+    static let shared = NetworkPlugin()
+
     func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
         switch result {
         case .success(let body):
