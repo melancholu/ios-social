@@ -65,6 +65,8 @@
 		ACA3A7F52A7A8C060056E415 /* TabFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3A7F42A7A8C060056E415 /* TabFlowCoordinator.swift */; };
 		ACA3A7F72A7A8CB50056E415 /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA3A7F62A7A8CB50056E415 /* TabBarPage.swift */; };
 		ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB028082A7E358E0010AD86 /* Instantiable.swift */; };
+		ACB6A6B92AC84AC800C3EA74 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6A6B82AC84AC800C3EA74 /* TextButton.swift */; };
+		ACB6A6BB2AC84AD300C3EA74 /* TextButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB6A6BA2AC84AD300C3EA74 /* TextButton.xib */; };
 		ACCC53BB2AAC70E6002081F2 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */; };
 		ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */; };
 		ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */; };
@@ -172,6 +174,8 @@
 		ACA3A7F42A7A8C060056E415 /* TabFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFlowCoordinator.swift; sourceTree = "<group>"; };
 		ACA3A7F62A7A8CB50056E415 /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
 		ACB028082A7E358E0010AD86 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
+		ACB6A6B82AC84AC800C3EA74 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		ACB6A6BA2AC84AD300C3EA74 /* TextButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextButton.xib; sourceTree = "<group>"; };
 		ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -345,6 +349,8 @@
 			children = (
 				AC77565E2AA355F90043F59E /* PrimaryButton.xib */,
 				AC7756602AA356700043F59E /* PrimaryButton.swift */,
+				ACB6A6BA2AC84AD300C3EA74 /* TextButton.xib */,
+				ACB6A6B82AC84AC800C3EA74 /* TextButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -760,6 +766,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB6A6BB2AC84AD300C3EA74 /* TextButton.xib in Resources */,
 				AC804AEE2A5AA2FD004EB4F2 /* LaunchScreen.storyboard in Resources */,
 				AC5148632A83C78C00D110B1 /* SettingViewController.storyboard in Resources */,
 				AC5148772A83CA3A00D110B1 /* UserDetailViewController.storyboard in Resources */,
@@ -969,6 +976,7 @@
 				ACCC53C92AAC7360002081F2 /* AuthFlowCoordinator.swift in Sources */,
 				AC56EAB22A9A1DC000FD2466 /* UserUseCase.swift in Sources */,
 				AC9F17A22AC6EC2A00487038 /* AuthRepositoryProtocol.swift in Sources */,
+				ACB6A6B92AC84AC800C3EA74 /* TextButton.swift in Sources */,
 				AC51486D2A83C7DA00D110B1 /* FeedListViewModel.swift in Sources */,
 				AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */,
 				AC9F17A42AC6EE2C00487038 /* Token.swift in Sources */,

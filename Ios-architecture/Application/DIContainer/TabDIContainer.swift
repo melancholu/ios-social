@@ -40,4 +40,10 @@ final class TabDIContainer {
 
         return UserListViewModel(userUseCase: userUseCase)
     }
+
+    func makeSettingViewModel() -> SettingViewModel {
+        let userUseCase = makeUserUseCase()
+
+        return SettingViewModel(userUseCase: userUseCase)
+    }
 }
