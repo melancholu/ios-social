@@ -48,19 +48,18 @@ final class AuthStorage {
             do {
                 let data = try JSONEncoder().encode(newValue)
                 userDefaults.set(data, forKey: Key.user.rawValue)
-            } catch {}
+            } catch {
+                userDefaults.removeObject(forKey: Key.user.rawValue)
+            }
         }
     }
 
-    func setAccessToken(_ token: String?) {
-        self.accessToken = token
+    func setToken(_ token: Token?) {
+        self.accessToken = token?.accessToken
+        self.refreshToken = token?.refreshToken
     }
 
-    func setRefreshToken(_ token: String?) {
-        self.refreshToken = token
-    }
-
-    func setUser(_ user: User) {
+    func setUser(_ user: User?) {
         self.user = user
     }
 }

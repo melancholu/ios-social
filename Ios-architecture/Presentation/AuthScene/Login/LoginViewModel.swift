@@ -41,14 +41,8 @@ final class LoginViewModel: BaseViewModel {
                 self.setLoading(.error)
             }
         }, receiveValue: { token in
-            self.authStorage.setAccessToken(token.accessToken)
-            self.authStorage.setRefreshToken(token.refreshToken)
-
-            if let user = token.user {
-                self.authStorage.setUser(user)
-                self.userUseCase.setUser(user: user)
-            }
-
+            self.authStorage.setToken(token)
+            self.authStorage.setUser(token.user)
             self.actions.onLogin()
         }).store(in: &subscriptions)
     }
