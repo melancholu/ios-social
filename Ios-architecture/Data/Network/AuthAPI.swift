@@ -45,4 +45,26 @@ extension AuthAPI: BaseAPI {
             return .requestPlain
         }
     }
+
+    var sampleData: Data {
+        switch self {
+        case .login, .refresh:
+            return Data(
+                """
+                {
+                    "accessToken": "TEST_ACCESS_TOKEN",
+                    "refreshToken": "TEST_REFRESH_TOKEN",
+                    "user": {
+                        "uuid": "TEST_UUID",
+                        "name": "TEST_NAME",
+                        "email": "TESTEMAIL@gmail.com",
+                        "password": "TEST_PASSWORD",
+                        "created": "2023-10-14T12:40:38.198Z"
+                    }
+                }
+                """.utf8)
+        default:
+            return Data()
+        }
+    }
 }

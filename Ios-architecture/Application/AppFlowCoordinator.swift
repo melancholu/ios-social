@@ -7,11 +7,6 @@
 
 import UIKit
 
-protocol AppFlowDelegate: AnyObject {
-    func onLogin()
-    func onLogout()
-}
-
 final class AppFlowCoordinator: Coordinator, AppFlowDelegate {
     private let window: UIWindow
     private let rootViewController: UINavigationController
