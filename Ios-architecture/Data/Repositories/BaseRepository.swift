@@ -9,5 +9,19 @@ import Foundation
 import Moya
 
 class BaseRepository<T: TargetType> {
-    let provider = MoyaProvider<T>(session: Session(interceptor: NetworkInterceptor.shared), plugins: [NetworkPlugin.shared])
+
+    init(_ environment: Environment = .prod) {
+        if environment == .local {
+            let customEndpointClosure = { (target: T) -> Endpoint in return Endpoint(url: URL(target: target).absoluteString,
+                                                                                     sampleResponseClosure: { .networkResponse(200, target.sampleData) },
+                                                                                     method: target.method,
+                                                                                     task: target.task,
+                                                                                     httpHeaderFields: target.headers)}
+            self.provider = MoyaProvider<T>(endpointClosure: customEndpointClosure, stubClosure: MoyaProvider.immediatelyStub)
+        } else {
+            self.provider = MoyaProvider<T>(session: Session(interceptor: NetworkInterceptor.shared), plugins: [NetworkPlugin.shared])
+        }
+    }
+
+    var provider: MoyaProvider<T>
 }
