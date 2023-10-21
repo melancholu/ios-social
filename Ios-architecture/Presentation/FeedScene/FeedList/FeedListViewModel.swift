@@ -14,15 +14,15 @@ struct FeedListViewModelActions {
 
 final class FeedListViewModel: BaseViewModel {
 
-    private let feedUseCase: FeedUseCase
+    private let feedUseCase: FeedUseCaseProtocol
     private let actions: FeedListViewModelActions
 
     @Published private(set) var feeds: [Feed]
-    private var nextPage: Int
-    private var loading: Loading
+    private(set) var nextPage: Int
+    private(set) var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(feedUseCase: FeedUseCase, actions: FeedListViewModelActions) {
+    init(feedUseCase: FeedUseCaseProtocol, actions: FeedListViewModelActions) {
         self.feedUseCase = feedUseCase
         self.actions = actions
         self.feeds = []
@@ -39,8 +39,7 @@ final class FeedListViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 self.setLoading(.completed)
-            case .failure(let error):
-                Log.error(error)
+            case .failure(_):
                 self.setLoading(.error)
             }
         }, receiveValue: { response in
@@ -61,8 +60,7 @@ final class FeedListViewModel: BaseViewModel {
                 switch completion {
                 case .finished:
                     self.setLoading(.completed)
-                case .failure(let error):
-                    Log.error(error)
+                case .failure(_):
                     self.setLoading(.error)
                 }
             }, receiveValue: { response in

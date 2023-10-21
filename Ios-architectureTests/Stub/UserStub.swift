@@ -9,9 +9,9 @@ import Foundation
 
 extension User {
     static func stub(
-    name: String = "testname",
-    email: String = "test@gmail.com",
-    password: String = "testpassword") -> Self {
+        name: String = "testname",
+        email: String = "test@gmail.com",
+        password: String = "testpassword") -> Self {
         User(name: name, email: email, password: password)
     }
 }

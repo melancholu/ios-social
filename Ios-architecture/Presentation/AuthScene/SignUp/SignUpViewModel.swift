@@ -14,12 +14,12 @@ struct SignUpViewModelActions {
 
 final class SignUpViewModel: BaseViewModel {
 
-    private let userUseCase: UserUseCase
+    private let userUseCase: UserUseCaseProtocol
     private let actions: SignUpViewModelActions
     @Published private(set) var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(userUseCase: UserUseCase, actions: SignUpViewModelActions) {
+    init(userUseCase: UserUseCaseProtocol, actions: SignUpViewModelActions) {
         self.userUseCase = userUseCase
         self.actions = actions
         self.loading = .idle
@@ -34,7 +34,6 @@ final class SignUpViewModel: BaseViewModel {
             case .finished:
                 self.setLoading(.completed)
             case .failure(let error):
-                Log.debug(error)
                 self.setLoading(.error)
             }
         }, receiveValue: { _ in

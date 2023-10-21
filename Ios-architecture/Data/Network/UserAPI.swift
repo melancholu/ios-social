@@ -45,4 +45,46 @@ extension UserAPI: BaseAPI {
             return .requestJSONEncodable(user)
         }
     }
+
+    var sampleData: Data {
+        switch self {
+        case .getMe, .getUser, .signUp:
+            return Data(
+                """
+                {
+                    "uuid": "TEST_UUID",
+                    "name": "TEST_NAME",
+                    "email": "TESTEMAIL@gmail.com",
+                    "password": "TEST_PASSWORD",
+                    "created": "2023-10-14T12:40:38.198Z"
+                }
+                """.utf8)
+        case .getUsers:
+            return Data(
+                """
+                {
+                    "data": [{
+                            "uuid": "TEST_UUID",
+                            "name": "TEST_NAME",
+                            "email": "TESTEMAIL@gmail.com",
+                            "password": "TEST_PASSWORD",
+                            "created": "2023-10-14T12:40:38.198Z"
+                        }
+                    }, {
+                            "uuid": "TEST_UUID",
+                            "name": "TEST_NAME",
+                            "email": "TESTEMAIL@gmail.com",
+                            "password": "TEST_PASSWORD",
+                            "created": "2023-10-14T12:40:38.198Z"
+                        }
+                    }],
+                    "meta": {
+                        "cur_page": 1,
+                        "next_page": 2,
+                        "page_num": 5,
+                    }
+                }
+                """.utf8)
+        }
+    }
 }

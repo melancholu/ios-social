@@ -8,7 +8,13 @@
 import Foundation
 import Combine
 
-final class AuthUseCase {
+protocol AuthUseCaseProtocol {
+    func login(email: String, password: String) -> AnyPublisher<Token, Error>
+    func logout() -> AnyPublisher<Void, Error>
+    func refresh() -> AnyPublisher<Void, Error>
+}
+
+final class AuthUseCase: AuthUseCaseProtocol {
 
     private let authRepository: AuthRepository
 

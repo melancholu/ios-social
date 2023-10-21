@@ -17,13 +17,14 @@ class AuthUseCaseTests: XCTestCase {
         let user: User = User.stub()
         let useCase = AuthUseCase(authRepository: authRepositoryMock)
 
-        useCase.login(email: user.email!, password: user.password!).sink(receiveCompletion: { completion in switch completion {
+        useCase.login(email: user.email!, password: user.password!).sink(receiveCompletion: { completion in
+        switch completion {
         case .finished:
             break
         case .failure(_):
-            XCTFail()
+            XCTFail("ERROR")
         }
-            expectation.fulfill()
+        expectation.fulfill()
         }, receiveValue: { token in
             XCTAssertEqual(token.accessToken!, "TEST_ACCESS_TOKEN")
             XCTAssertEqual(token.refreshToken!, "TEST_REFRESH_TOKEN")
@@ -36,13 +37,14 @@ class AuthUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation()
         let useCase = AuthUseCase(authRepository: authRepositoryMock)
 
-        useCase.logout().sink(receiveCompletion: { completion in switch completion {
+        useCase.logout().sink(receiveCompletion: { completion in
+        switch completion {
         case .finished:
             break
         case .failure(_):
-            XCTFail()
+            XCTFail("ERROR")
         }
-            expectation.fulfill()
+        expectation.fulfill()
         }, receiveValue: { _ in
         }).store(in: &subscriptions)
 
@@ -53,13 +55,14 @@ class AuthUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation()
         let useCase = AuthUseCase(authRepository: authRepositoryMock)
 
-        useCase.refresh().sink(receiveCompletion: { completion in switch completion {
+        useCase.refresh().sink(receiveCompletion: { completion in
+        switch completion {
         case .finished:
             break
         case .failure(_):
-            XCTFail()
+            XCTFail("ERROR")
         }
-            expectation.fulfill()
+        expectation.fulfill()
         }, receiveValue: { _ in
         }).store(in: &subscriptions)
 

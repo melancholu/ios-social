@@ -17,13 +17,14 @@ class FeedUseCaseTests: XCTestCase {
         let feed: Feed = Feed.stub()
         let useCase = FeedUseCase(feedRepository: feedRepositoryMock)
 
-        useCase.createFeed(feed).sink(receiveCompletion: { completion in switch completion {
+        useCase.createFeed(feed).sink(receiveCompletion: { completion in
+        switch completion {
         case .finished:
             break
         case .failure(_):
-            XCTFail()
+            XCTFail("ERROR")
         }
-            expectation.fulfill()
+        expectation.fulfill()
         }, receiveValue: { feed in
             XCTAssertEqual(feed.content!, "TEST_CONTENT")
         }).store(in: &subscriptions)
@@ -35,13 +36,14 @@ class FeedUseCaseTests: XCTestCase {
         let expectation = XCTestExpectation()
         let useCase = FeedUseCase(feedRepository: feedRepositoryMock)
 
-        useCase.getFeeds(1).sink(receiveCompletion: { completion in switch completion {
+        useCase.getFeeds(1).sink(receiveCompletion: { completion in
+        switch completion {
         case .finished:
             break
         case .failure(_):
-            XCTFail()
+            XCTFail("ERROR")
         }
-            expectation.fulfill()
+        expectation.fulfill()
         }, receiveValue: { feeds in
             XCTAssertEqual(feeds.data.count, 2)
         }).store(in: &subscriptions)

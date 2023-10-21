@@ -16,15 +16,13 @@ struct LoginViewModelActions {
 final class LoginViewModel: BaseViewModel {
 
     private let authStorage: AuthStorage = AuthStorage.shared
-    private let authUseCase: AuthUseCase
-    private let userUseCase: UserUseCase
+    private let authUseCase: AuthUseCaseProtocol
     private let actions: LoginViewModelActions
     @Published private(set) var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(authUseCase: AuthUseCase, userUseCase: UserUseCase, actions: LoginViewModelActions) {
+    init(authUseCase: AuthUseCaseProtocol, actions: LoginViewModelActions) {
         self.authUseCase = authUseCase
-        self.userUseCase = userUseCase
         self.actions = actions
         self.loading = .idle
         self.subscriptions = Set<AnyCancellable>()
