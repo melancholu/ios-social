@@ -5,7 +5,7 @@
 //  Created by song dong hyeok on 2023/08/19.
 //
 
-struct Feed: Codable {
+struct Feed: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case uuid
         case user
@@ -39,5 +39,9 @@ struct Feed: Codable {
         try container.encodeIfPresent(user, forKey: .user)
         try container.encodeIfPresent(content, forKey: .content)
         try container.encodeIfPresent(created, forKey: .created)
+    }
+
+    static func == (lhs: Feed, rhs: Feed) -> Bool {
+        return lhs.uuid == rhs.uuid
     }
 }

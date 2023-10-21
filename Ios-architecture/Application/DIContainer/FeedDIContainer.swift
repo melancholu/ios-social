@@ -21,7 +21,7 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
     }
 
     // MARK: - UseCase
-    func makeFeedUseCase() -> FeedUseCase {
+    func makeFeedUseCase() -> FeedUseCaseProtocol {
         return FeedUseCase(feedRepository: dependencies.feedRepository)
     }
 

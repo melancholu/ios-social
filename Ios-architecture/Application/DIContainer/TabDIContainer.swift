@@ -30,7 +30,7 @@ final class TabDIContainer {
     }
 
     // MARK: - UseCase
-    func makeUserUseCase() -> UserUseCase {
+    func makeUserUseCase() -> UserUseCaseProtocol {
         return UserUseCase(userRepository: dependencies.userRepository)
     }
 

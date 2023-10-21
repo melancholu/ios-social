@@ -1,7 +1,6 @@
 excluded: # SwiftLint 검사에서 제외할 파일 경로
   - Pods
   - Ios-architecture/Application/AppDelegate.swift
-  - Ios-architectureTests/
   - Ios-architectureUITests/
 
 line_length:

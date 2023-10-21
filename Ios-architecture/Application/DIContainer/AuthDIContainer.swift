@@ -22,11 +22,11 @@ final class AuthDIContainer: AuthFlowCoordinatorDependencies {
     }
 
     // MARK: - UseCase
-    func makeAuthUseCase() -> AuthUseCase {
+    func makeAuthUseCase() -> AuthUseCaseProtocol {
         return AuthUseCase(authRepository: dependencies.authRepository)
     }
 
-    func makeUserUseCase() -> UserUseCase {
+    func makeUserUseCase() -> UserUseCaseProtocol {
         return UserUseCase(userRepository: dependencies.userRepository)
     }
 
@@ -58,9 +58,8 @@ final class AuthDIContainer: AuthFlowCoordinatorDependencies {
     // MARK: - ViewModel
     func makeLoginViewModel(actions: LoginViewModelActions) -> LoginViewModel {
         let authUseCase = makeAuthUseCase()
-        let userUseCase = makeUserUseCase()
 
-        return LoginViewModel(authUseCase: authUseCase, userUseCase: userUseCase, actions: actions)
+        return LoginViewModel(authUseCase: authUseCase, actions: actions)
     }
 
     func makeSignUpViewModel(actions: SignUpViewModelActions) -> SignUpViewModel {

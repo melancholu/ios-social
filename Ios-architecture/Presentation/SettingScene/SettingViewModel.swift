@@ -10,11 +10,11 @@ import Combine
 
 final class SettingViewModel: BaseViewModel {
 
-    private let userUseCase: UserUseCase
+    private let userUseCase: UserUseCaseProtocol
     @Published private(set) var user: User?
     private var subscriptions: Set<AnyCancellable>
 
-    init(userUseCase: UserUseCase) {
+    init(userUseCase: UserUseCaseProtocol) {
         self.userUseCase = userUseCase
         self.user = AuthStorage.shared.user
         self.subscriptions = Set<AnyCancellable>()

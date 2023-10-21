@@ -10,13 +10,13 @@ import Combine
 
 final class UserListViewModel: BaseViewModel {
 
-    private let userUseCase: UserUseCase
+    private let userUseCase: UserUseCaseProtocol
     @Published private(set) var users: [User]
     private var nextPage: Int
     private var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(userUseCase: UserUseCase) {
+    init(userUseCase: UserUseCaseProtocol) {
         self.userUseCase = userUseCase
         self.users = []
         self.nextPage = -1
