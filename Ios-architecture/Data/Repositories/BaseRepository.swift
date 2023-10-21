@@ -10,7 +10,7 @@ import Moya
 
 class BaseRepository<T: TargetType> {
 
-    init(_ environment: Environment = .prod) {
+    init(_ environment: Environment = .local) {
         if environment == .local {
             let customEndpointClosure = { (target: T) -> Endpoint in return Endpoint(url: URL(target: target).absoluteString,
                                                                                      sampleResponseClosure: { .networkResponse(200, target.sampleData) },

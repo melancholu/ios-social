@@ -90,6 +90,9 @@
 		ACB028092A7E358E0010AD86 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB028082A7E358E0010AD86 /* Instantiable.swift */; };
 		ACB6A6B92AC84AC800C3EA74 /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6A6B82AC84AC800C3EA74 /* TextButton.swift */; };
 		ACB6A6BB2AC84AD300C3EA74 /* TextButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACB6A6BA2AC84AD300C3EA74 /* TextButton.xib */; };
+		ACC0CB562AE39E6A00DD8231 /* FeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0CB552AE39E6A00DD8231 /* FeedUseCaseTests.swift */; };
+		ACC0CB572AE3A25000DD8231 /* FeedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EA9E2A99CE6500FD2466 /* FeedUseCase.swift */; };
+		ACC0CB592AE3A27800DD8231 /* FeedStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0CB582AE3A27800DD8231 /* FeedStub.swift */; };
 		ACCC53BB2AAC70E6002081F2 /* LoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */; };
 		ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */; };
 		ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */; };
@@ -196,6 +199,8 @@
 		ACB028082A7E358E0010AD86 /* Instantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 		ACB6A6B82AC84AC800C3EA74 /* TextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		ACB6A6BA2AC84AD300C3EA74 /* TextButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextButton.xib; sourceTree = "<group>"; };
+		ACC0CB552AE39E6A00DD8231 /* FeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUseCaseTests.swift; sourceTree = "<group>"; };
+		ACC0CB582AE3A27800DD8231 /* FeedStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStub.swift; sourceTree = "<group>"; };
 		ACCC53BA2AAC70E6002081F2 /* LoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginViewController.storyboard; sourceTree = "<group>"; };
 		ACCC53BC2AAC70F1002081F2 /* SignUpViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpViewController.storyboard; sourceTree = "<group>"; };
 		ACCC53BE2AAC710A002081F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AC3CD4C42ADAB1CA0010A1D5 /* AuthUseCaseTests.swift */,
+				ACC0CB552AE39E6A00DD8231 /* FeedUseCaseTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 		AC3CD4CD2ADAC4320010A1D5 /* Stub */ = {
 			isa = PBXGroup;
 			children = (
+				ACC0CB582AE3A27800DD8231 /* FeedStub.swift */,
 				AC3CD4D22ADAC4750010A1D5 /* UserStub.swift */,
 			);
 			path = Stub;
@@ -933,11 +940,14 @@
 				AC3CD4E52ADAD0B50010A1D5 /* FeedAPI.swift in Sources */,
 				AC3CD4DB2ADACFC10010A1D5 /* AuthStorage.swift in Sources */,
 				AC3CD4DA2ADACD020010A1D5 /* Token.swift in Sources */,
+				ACC0CB562AE39E6A00DD8231 /* FeedUseCaseTests.swift in Sources */,
 				AC3CD4D62ADACAEA0010A1D5 /* AuthRepository.swift in Sources */,
+				ACC0CB572AE3A25000DD8231 /* FeedUseCase.swift in Sources */,
 				AC3CD4E42ADAD0780010A1D5 /* UserRepository.swift in Sources */,
 				AC3CD4C92ADAB70B0010A1D5 /* User.swift in Sources */,
 				AC3CD4CC2ADAB7680010A1D5 /* AuthRepositoryProtocol.swift in Sources */,
 				AC3CD4F22ADAD4040010A1D5 /* NetworkPlugin.swift in Sources */,
+				ACC0CB592AE3A27800DD8231 /* FeedStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
