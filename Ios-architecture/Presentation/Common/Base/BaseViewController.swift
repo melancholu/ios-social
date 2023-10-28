@@ -14,12 +14,15 @@ class BaseViewController: UIViewController, StoryboardInstantiable {
 
         setViews()
         setBindings()
+        setAccessibility()
         setNavigationItem()
     }
 
     func setViews() {}
 
     func setBindings() {}
+
+    func setAccessibility() {}
 
     func setNavigationItem() {
         let backBarButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -40,6 +43,11 @@ class BaseViewController: UIViewController, StoryboardInstantiable {
         toastLabel.alpha = 1.0
         toastLabel.layer.cornerRadius = 10
         toastLabel.clipsToBounds  =  true
+        toastLabel.becomeFirstResponder()
+        toastLabel.isAccessibilityElement = true
+        toastLabel.accessibilityTraits = .staticText
+        toastLabel.accessibilityLabel = message
+        toastLabel.accessibilityIdentifier = "ToastLabel"
 
         self.view.addSubview(toastLabel)
         UIView.animate(withDuration: 2.0, delay: 0.1, options: .curveEaseOut, animations: {
