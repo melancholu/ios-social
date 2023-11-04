@@ -5,6 +5,7 @@
 //  Created by song dong hyeok on 2023/09/29.
 //
 
+import Foundation
 import Moya
 
 enum AuthAPI {
@@ -26,7 +27,7 @@ extension AuthAPI: BaseAPI {
         }
     }
 
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .login: return .post
         case .logout: return .post
