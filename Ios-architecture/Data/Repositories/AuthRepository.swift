@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import Moya
 import Combine
+import CombineMoya
 
 final class AuthRepository: BaseRepository<AuthAPI>, AuthRepositoryProtocol {
     private let authStorage: AuthStorage = AuthStorage.shared

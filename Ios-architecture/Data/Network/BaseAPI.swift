@@ -5,6 +5,7 @@
 //  Created by song dong hyeok on 2023/09/30.
 //
 
+import Foundation
 import Moya
 
 protocol BaseAPI: TargetType {}
