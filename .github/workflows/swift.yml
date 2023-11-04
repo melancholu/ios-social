@@ -1,0 +1,22 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: Swift
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Make Config
+      run: mkdir Ios-architecture/Config && echo "BASE_URL=http:/$()/localhost:3000" > Ios-architecture/Config/Debug.xcconfig && echo "BASE_URL=http:/$()/localhost:3000" > Ios-architecture/Config/Prod.xcconfig
+    - name: Run tests
+      run: xcodebuild clean test -project Ios-architecture.xcodeproj -scheme Ios-architecture -configuration Debug -destination 'platform=ios simulator,name=iPhone 14 Pro,OS=latest'
