@@ -12,10 +12,20 @@ final class LoginSceneUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
 
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.launchArguments.append("isUITestingLoggedOut")
+        app.launch()
     }
 
-    override func tearDownWithError() throws {}
+    override func tearDownWithError() throws {
+        setToken(nil)
+    }
+
+    func setToken(_ token: Token?) {
+        let authStorage: AuthStorage = AuthStorage.shared
+
+        authStorage.setToken(token)
+    }
 
     func testLogin_whenEnterInvalidInputs_thenShowToasts() throws {
         let app = XCUIApplication()

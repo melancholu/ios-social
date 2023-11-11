@@ -10,6 +10,7 @@ import Combine
 class FeedListViewController: BaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var createButton: UIButton!
 
     private var viewModel: FeedListViewModel!
     private var subscriptions = Set<AnyCancellable>()
@@ -42,6 +43,13 @@ class FeedListViewController: BaseViewController {
             .store(in: &subscriptions)
     }
 
+    override func setAccessibility() {
+        tableView.accessibilityLabel = String(localized: "FeedTableViewAccessbilityLabel")
+        tableView.accessibilityIdentifier = "FeedTableView"
+        createButton.accessibilityLabel = String(localized: "CreateButtonAccessbilityLabel")
+        createButton.accessibilityIdentifier = "CreateButton"
+    }
+
     @IBAction func onClickCreateFeed(_ sender: Any) {
         viewModel.showCreateFeedVC()
     }
@@ -60,6 +68,8 @@ extension FeedListViewController: UITableViewDataSource {
         }
 
         cell.display(feed: viewModel.feeds[indexPath.row])
+        cell.accessibilityLabel = viewModel.feeds[indexPath.row].content
+        cell.accessibilityIdentifier = viewModel.feeds[indexPath.row].content
 
         return cell
     }

@@ -21,7 +21,7 @@ class FeedUseCaseTests: XCTestCase {
         switch completion {
         case .finished:
             break
-        case .failure(_):
+        case .failure:
             XCTFail("ERROR")
         }
         expectation.fulfill()
@@ -40,7 +40,7 @@ class FeedUseCaseTests: XCTestCase {
         switch completion {
         case .finished:
             break
-        case .failure(_):
+        case .failure:
             XCTFail("ERROR")
         }
         expectation.fulfill()

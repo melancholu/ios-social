@@ -21,7 +21,7 @@ class AuthUseCaseTests: XCTestCase {
         switch completion {
         case .finished:
             break
-        case .failure(_):
+        case .failure:
             XCTFail("ERROR")
         }
         expectation.fulfill()
@@ -41,7 +41,7 @@ class AuthUseCaseTests: XCTestCase {
         switch completion {
         case .finished:
             break
-        case .failure(_):
+        case .failure:
             XCTFail("ERROR")
         }
         expectation.fulfill()
@@ -59,7 +59,7 @@ class AuthUseCaseTests: XCTestCase {
         switch completion {
         case .finished:
             break
-        case .failure(_):
+        case .failure:
             XCTFail("ERROR")
         }
         expectation.fulfill()
