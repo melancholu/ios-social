@@ -437,6 +437,7 @@
 			children = (
 				AC804B172A5AA90C004EB4F2 /* Application */,
 				AC804B122A5AA8C7004EB4F2 /* Common */,
+				AC56EAA22A99EE4D00FD2466 /* Constant.swift */,
 				ACE5AFBA2A90BBF80097306F /* Config */,
 				AC804B142A5AA8E1004EB4F2 /* Data */,
 				AC804B152A5AA8FD004EB4F2 /* Domain */,
@@ -480,7 +481,6 @@
 		AC804B122A5AA8C7004EB4F2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				AC56EAA22A99EE4D00FD2466 /* Constant.swift */,
 				AC56EAA62A99EEBD00FD2466 /* enum */,
 				AC56EAA52A99EE9900FD2466 /* extension */,
 				AC56EAA42A99EE9200FD2466 /* protocol */,
@@ -849,7 +849,7 @@
 			);
 			mainGroup = AC804AD52A5AA2F9004EB4F2;
 			packageReferences = (
-				AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya.git" */,
+				AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = AC804ADF2A5AA2F9004EB4F2 /* Products */;
 			projectDirPath = "";
@@ -1369,7 +1369,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya.git" */ = {
+		AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
 			requirement = {
@@ -1382,12 +1382,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		AC8057402AF687B300E0AF5B /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = CombineMoya;
 		};
 		AC8057422AF687B300E0AF5B /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya.git" */;
+			package = AC80573F2AF687B300E0AF5B /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */

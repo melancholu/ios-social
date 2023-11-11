@@ -10,6 +10,14 @@ import Combine
 
 class LoginViewModelTests: XCTestCase {
 
+    override func setUp() {
+        initToken()
+    }
+
+    override func tearDown() {
+        initToken()
+    }
+
     func initToken() {
         let authStorage: AuthStorage = AuthStorage.shared
 
@@ -17,8 +25,6 @@ class LoginViewModelTests: XCTestCase {
     }
 
     func test_whenLoginSucceed() {
-        initToken()
-
         let authStorage: AuthStorage = AuthStorage.shared
         let authUseCaseMock = AuthUseCaseMock()
         let actions = LoginViewModelActions(showSignUpVC: {}, onLogin: {})
@@ -33,8 +39,6 @@ class LoginViewModelTests: XCTestCase {
     }
 
     func test_whenLoginFailed() {
-        initToken()
-
         let authStorage: AuthStorage = AuthStorage.shared
         let authUseCaseMock = AuthUseCaseErrorMock()
         let actions = LoginViewModelActions(showSignUpVC: {}, onLogin: {})
