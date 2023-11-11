@@ -1,12 +1,11 @@
 excluded: # SwiftLint 검사에서 제외할 파일 경로
   - Pods
   - Ios-architecture/Application/AppDelegate.swift
-  - Ios-architectureTests/
   - Ios-architectureUITests/
 
 line_length:
- warning: 150
- error: 200
+ warning: 200
+ error: 250
  ignores_comments: true
 
 identifier_name:

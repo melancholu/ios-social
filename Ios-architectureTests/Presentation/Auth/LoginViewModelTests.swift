@@ -1,0 +1,54 @@
+//
+//  LoginViewModelTests.swift
+//  Ios-architectureTests
+//
+//  Created by song dong hyeok on 2023/10/21.
+//
+
+import XCTest
+import Combine
+
+class LoginViewModelTests: XCTestCase {
+
+    override func setUp() {
+        initToken()
+    }
+
+    override func tearDown() {
+        initToken()
+    }
+
+    func initToken() {
+        let authStorage: AuthStorage = AuthStorage.shared
+
+        authStorage.setToken(nil)
+    }
+
+    func test_whenLoginSucceed() {
+        let authStorage: AuthStorage = AuthStorage.shared
+        let authUseCaseMock = AuthUseCaseMock()
+        let actions = LoginViewModelActions(showSignUpVC: {}, onLogin: {})
+
+        let viewModel = LoginViewModel(authUseCase: authUseCaseMock, actions: actions)
+
+        viewModel.login(email: "TEST_EMAIL@gmail.com", password: "TEST_PASSWORD")
+
+        XCTAssertEqual(viewModel.loading, Loading.completed)
+        XCTAssertEqual(authStorage.accessToken!, "TEST_ACCESS_TOKEN")
+        XCTAssertEqual(authStorage.refreshToken!, "TEST_REFRESH_TOKEN")
+    }
+
+    func test_whenLoginFailed() {
+        let authStorage: AuthStorage = AuthStorage.shared
+        let authUseCaseMock = AuthUseCaseErrorMock()
+        let actions = LoginViewModelActions(showSignUpVC: {}, onLogin: {})
+
+        let viewModel = LoginViewModel(authUseCase: authUseCaseMock, actions: actions)
+
+        viewModel.login(email: "TEST_EMAIL@gmail.com", password: "TEST_PASSWORD")
+
+        XCTAssertEqual(viewModel.loading, Loading.error)
+        XCTAssertNil(authStorage.accessToken)
+        XCTAssertNil(authStorage.refreshToken)
+    }
+}

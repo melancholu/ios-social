@@ -14,8 +14,4 @@ class UserDetailViewController: UIViewController, StoryboardInstantiable {
         return view
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }

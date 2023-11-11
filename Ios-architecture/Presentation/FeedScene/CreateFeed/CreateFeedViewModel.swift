@@ -14,12 +14,12 @@ struct CreateFeedViewModelActions {
 
 final class CreateFeedViewModel: BaseViewModel {
 
-    private let feedUseCase: FeedUseCase
+    private let feedUseCase: FeedUseCaseProtocol
     private let actions: CreateFeedViewModelActions
-    private var loading: Loading
+    private(set) var loading: Loading
     private var subscriptions: Set<AnyCancellable>
 
-    init(feedUseCase: FeedUseCase, actions: CreateFeedViewModelActions) {
+    init(feedUseCase: FeedUseCaseProtocol, actions: CreateFeedViewModelActions) {
         self.feedUseCase = feedUseCase
         self.actions = actions
         self.loading = .idle
@@ -33,7 +33,7 @@ final class CreateFeedViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 self.setLoading(.completed)
-            case .failure(_):
+            case .failure:
                 self.setLoading(.error)
             }
         }, receiveValue: { _ in

@@ -12,6 +12,8 @@ class LoginViewController: BaseViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
 
     private var viewModel: LoginViewModel!
     private var subscriptions = Set<AnyCancellable>()
@@ -35,6 +37,17 @@ class LoginViewController: BaseViewController {
                 }
             })
             .store(in: &subscriptions)
+    }
+
+    override func setAccessibility() {
+        emailTextField.accessibilityLabel = String(localized: "EmailTextFieldAccessbilityLabel")
+        emailTextField.accessibilityIdentifier = "EmailTextField"
+        passwordTextField.accessibilityLabel = String(localized: "PasswordTextFieldAccessbilityLabel")
+        passwordTextField.accessibilityIdentifier = "PasswordTextField"
+        signUpButton.accessibilityLabel = String(localized: "SignUpButtonAccessbilityLabel")
+        signUpButton.accessibilityIdentifier = "SignUpButton"
+        loginButton.accessibilityLabel = String(localized: "LoginButtonAccessbilityLabel")
+        loginButton.accessibilityIdentifier = "LoginButton"
     }
 
     @IBAction func onClickLogin(_ sender: Any) {

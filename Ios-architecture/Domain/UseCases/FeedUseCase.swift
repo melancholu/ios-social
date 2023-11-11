@@ -8,7 +8,12 @@
 import Foundation
 import Combine
 
-final class FeedUseCase {
+protocol FeedUseCaseProtocol {
+    func createFeed(_ feed: Feed) -> AnyPublisher<Feed, Error>
+    func getFeeds(_ page: Int) -> AnyPublisher<Pagination<[Feed]>, Error>
+}
+
+final class FeedUseCase: FeedUseCaseProtocol {
 
     private let feedRepository: FeedRepository
 

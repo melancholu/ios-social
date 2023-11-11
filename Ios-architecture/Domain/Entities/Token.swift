@@ -23,6 +23,12 @@ struct Token: Codable {
         user = (try? container.decodeIfPresent(User.self, forKey: .user))
     }
 
+    init(accessToken: String?, refreshToken: String?) {
+        self.accessToken = accessToken
+        self.refreshToken = refreshToken
+        self.user = nil
+    }
+
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(accessToken, forKey: .accessToken)

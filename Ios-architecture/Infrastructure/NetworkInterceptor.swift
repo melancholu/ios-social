@@ -59,7 +59,7 @@ final class NetworkInterceptor: RequestInterceptor {
                     self.isRefreshing = false
                     self.requestQueue.forEach { $0(.retry) }
                     completion(.retry)
-                case .failure(_):
+                case .failure:
                     self.isRefreshing = false
                     self.logout()
                     completion(.doNotRetry)

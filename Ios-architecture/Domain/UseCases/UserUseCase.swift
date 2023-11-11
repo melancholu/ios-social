@@ -8,7 +8,14 @@
 import Foundation
 import Combine
 
-final class UserUseCase {
+protocol UserUseCaseProtocol {
+    func getMe() -> AnyPublisher<User, Error>
+    func getUser(_ uuid: String) -> AnyPublisher<User, Error>
+    func getUsers(_ page: Int) -> AnyPublisher<Pagination<[User]>, Error>
+    func signUp(name: String, email: String, password: String) -> AnyPublisher<User, Error>
+}
+
+final class UserUseCase: UserUseCaseProtocol {
 
     private let userRepository: UserRepository
 

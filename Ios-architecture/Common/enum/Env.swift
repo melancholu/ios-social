@@ -20,3 +20,9 @@ enum Env {
         return baseURL
     }()
 }
+
+enum Environment: String {
+    case prod = "PRODUCTION"
+    case dev = "DEVELOPMENT"
+    case local = "LOCAL"
+}

@@ -5,6 +5,7 @@
 //  Created by song dong hyeok on 2023/08/26.
 //
 
+import Foundation
 import Moya
 
 enum UserAPI {
@@ -24,7 +25,7 @@ extension UserAPI: BaseAPI {
         }
     }
 
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .getMe: return .get
         case .getUser: return .get
@@ -43,6 +44,48 @@ extension UserAPI: BaseAPI {
             return .requestParameters(parameters: ["page": page], encoding: URLEncoding.queryString)
         case let .signUp(user):
             return .requestJSONEncodable(user)
+        }
+    }
+
+    var sampleData: Data {
+        switch self {
+        case .getMe, .getUser, .signUp:
+            return Data(
+                """
+                {
+                    "uuid": "TEST_UUID",
+                    "name": "TEST_NAME",
+                    "email": "TESTEMAIL@gmail.com",
+                    "password": "TEST_PASSWORD",
+                    "created": "2023-10-14T12:40:38.198Z"
+                }
+                """.utf8)
+        case .getUsers:
+            return Data(
+                """
+                {
+                    "data": [{
+                            "uuid": "TEST_UUID",
+                            "name": "TEST_NAME",
+                            "email": "TESTEMAIL@gmail.com",
+                            "password": "TEST_PASSWORD",
+                            "created": "2023-10-14T12:40:38.198Z"
+                        }
+                    }, {
+                            "uuid": "TEST_UUID",
+                            "name": "TEST_NAME",
+                            "email": "TESTEMAIL@gmail.com",
+                            "password": "TEST_PASSWORD",
+                            "created": "2023-10-14T12:40:38.198Z"
+                        }
+                    }],
+                    "meta": {
+                        "cur_page": 1,
+                        "next_page": 2,
+                        "page_num": 5,
+                    }
+                }
+                """.utf8)
         }
     }
 }
