@@ -28,6 +28,12 @@ class CreateFeedViewController: BaseViewController {
         postButton.button.addTarget(self, action: #selector(onClickPost(_:)), for: UIControl.Event.touchUpInside)
     }
 
+    override func setAccessibility() {
+        textView.accessibilityLabel = String(localized: "FeedTextViewAccessbilityLabel")
+        textView.accessibilityIdentifier = "FeedTextView"
+        postButton.accessibilityLabel = String(localized: "PostFeedButtonAccessbilityLabel")
+        postButton.accessibilityIdentifier = "PostFeedButton"
+    }
     @IBAction func onClickPost(_ sender: Any) {
         guard let text = textView.text else { return }
         guard case text.isEmpty = false else {

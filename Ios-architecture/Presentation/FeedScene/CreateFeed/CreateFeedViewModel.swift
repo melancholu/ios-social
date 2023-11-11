@@ -33,7 +33,7 @@ final class CreateFeedViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 self.setLoading(.completed)
-            case .failure(_):
+            case .failure:
                 self.setLoading(.error)
             }
         }, receiveValue: { _ in

@@ -24,10 +24,6 @@ class SignUpViewController: BaseViewController {
         return view
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func setViews() {
         super.setViews()
 

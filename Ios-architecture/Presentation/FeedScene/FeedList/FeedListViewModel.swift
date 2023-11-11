@@ -39,7 +39,7 @@ final class FeedListViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 self.setLoading(.completed)
-            case .failure(_):
+            case .failure:
                 self.setLoading(.error)
             }
         }, receiveValue: { response in
@@ -60,7 +60,7 @@ final class FeedListViewModel: BaseViewModel {
                 switch completion {
                 case .finished:
                     self.setLoading(.completed)
-                case .failure(_):
+                case .failure:
                     self.setLoading(.error)
                 }
             }, receiveValue: { response in

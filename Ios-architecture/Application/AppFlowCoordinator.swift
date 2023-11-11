@@ -24,10 +24,22 @@ final class AppFlowCoordinator: Coordinator, AppFlowDelegate {
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
 
-        if isLoggedIn() {
+        if ProcessInfo.processInfo.arguments.contains("isUITestingLoggedIn") {
+            let authStorage: AuthStorage = AuthStorage.shared
+            authStorage.setToken(Token(accessToken: "TEST_ACCESS_TOKEN", refreshToken: "TEST_REFRESH_TOKEN"))
+
             startTabBar()
-        } else {
+        } else if ProcessInfo.processInfo.arguments.contains("isUITestingLoggedOut") {
+            let authStorage: AuthStorage = AuthStorage.shared
+            authStorage.setToken(nil)
+
             startAuth()
+        } else {
+            if isLoggedIn() {
+                startTabBar()
+            } else {
+                startAuth()
+            }
         }
     }
 

@@ -117,6 +117,11 @@
 		ACCC53C92AAC7360002081F2 /* AuthFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53C82AAC7360002081F2 /* AuthFlowCoordinator.swift */; };
 		ACCC53CE2AAC773A002081F2 /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */; };
 		ACCC53D02AAC7B63002081F2 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */; };
+		ACD326102AFF439900A92E5E /* FeedSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3260F2AFF439900A92E5E /* FeedSceneUITests.swift */; };
+		ACD326112AFF685100A92E5E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F17A32AC6EE2C00487038 /* Token.swift */; };
+		ACD326122AFF685800A92E5E /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */; };
+		ACD326132AFF68C200A92E5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAAB2A9A1C4A00FD2466 /* User.swift */; };
+		ACD326152AFF72EE00A92E5E /* CreateFeedSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD326142AFF72EE00A92E5E /* CreateFeedSceneUITests.swift */; };
 		ACD9CE4C2AC8048C00953342 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */; };
 		ACD9CE4E2AC804A900953342 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4D2AC804A900953342 /* BaseAPI.swift */; };
 		ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
@@ -232,6 +237,8 @@
 		ACCC53C82AAC7360002081F2 /* AuthFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthFlowCoordinator.swift; sourceTree = "<group>"; };
 		ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStorage.swift; sourceTree = "<group>"; };
 		ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		ACD3260F2AFF439900A92E5E /* FeedSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSceneUITests.swift; sourceTree = "<group>"; };
+		ACD326142AFF72EE00A92E5E /* CreateFeedSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedSceneUITests.swift; sourceTree = "<group>"; };
 		ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		ACD9CE4D2AC804A900953342 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		ACE5AFB52A90ADF20097306F /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -607,6 +614,7 @@
 		ACB6FB5C2AED0BD200CB44F6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ACD3260E2AFF438600A92E5E /* FeedScene */,
 				ACB6FB5D2AED0BDF00CB44F6 /* AuthScene */,
 			);
 			path = Presentation;
@@ -702,6 +710,15 @@
 				ACCC53B92AAC70C6002081F2 /* SignUp */,
 			);
 			path = AuthScene;
+			sourceTree = "<group>";
+		};
+		ACD3260E2AFF438600A92E5E /* FeedScene */ = {
+			isa = PBXGroup;
+			children = (
+				ACD3260F2AFF439900A92E5E /* FeedSceneUITests.swift */,
+				ACD326142AFF72EE00A92E5E /* CreateFeedSceneUITests.swift */,
+			);
+			path = FeedScene;
 			sourceTree = "<group>";
 		};
 		ACE5AFB72A90AE100097306F /* Network */ = {
@@ -1046,7 +1063,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACD326112AFF685100A92E5E /* Token.swift in Sources */,
+				ACD326102AFF439900A92E5E /* FeedSceneUITests.swift in Sources */,
 				ACB6FB5F2AED0C0400CB44F6 /* LoginSceneUITests.swift in Sources */,
+				ACD326132AFF68C200A92E5E /* User.swift in Sources */,
+				ACD326152AFF72EE00A92E5E /* CreateFeedSceneUITests.swift in Sources */,
+				ACD326122AFF685800A92E5E /* AuthStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

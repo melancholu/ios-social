@@ -17,7 +17,7 @@ final class NetworkPlugin: PluginType {
             if let json = try? JSONSerialization.jsonObject(with: body.data, options: .mutableContainers) {
                 //                Log.network(json)
             }
-        case .failure(_):
+        case .failure:
             break
         }
     }

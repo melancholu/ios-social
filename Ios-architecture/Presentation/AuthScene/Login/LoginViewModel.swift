@@ -35,7 +35,7 @@ final class LoginViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 self.setLoading(.completed)
-            case .failure(_):
+            case .failure:
                 self.setLoading(.error)
             }
         }, receiveValue: { token in

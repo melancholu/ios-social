@@ -25,7 +25,7 @@ final class SettingViewModel: BaseViewModel {
             switch completion {
             case .finished:
                 break
-            case .failure(_):
+            case .failure:
                 break
             }
         }, receiveValue: { response in
