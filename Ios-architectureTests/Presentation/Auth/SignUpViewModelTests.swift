@@ -10,6 +10,10 @@ import Combine
 
 class SignUpViewModelTests: XCTestCase {
 
+    override func setUp() {}
+
+    override func tearDown() {}
+
     func test_whenSignUpSucceed() {
         let userUseCaseMock = UserUseCaseMock()
         let actions = SignUpViewModelActions(closeSignUpVC: {})

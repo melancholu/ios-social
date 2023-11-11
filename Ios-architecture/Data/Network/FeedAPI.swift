@@ -5,6 +5,7 @@
 //  Created by song dong hyeok on 2023/08/19.
 //
 
+import Foundation
 import Moya
 
 enum FeedAPI {
@@ -20,7 +21,7 @@ extension FeedAPI: BaseAPI {
         }
     }
 
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .createFeed: return .post
         case .getFeeds: return .get

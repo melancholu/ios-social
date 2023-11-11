@@ -5,6 +5,7 @@
 //  Created by song dong hyeok on 2023/08/26.
 //
 
+import Foundation
 import Moya
 
 enum UserAPI {
@@ -24,7 +25,7 @@ extension UserAPI: BaseAPI {
         }
     }
 
-    var method: Method {
+    var method: Moya.Method {
         switch self {
         case .getMe: return .get
         case .getUser: return .get
