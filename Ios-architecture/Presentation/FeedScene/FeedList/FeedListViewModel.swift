@@ -10,6 +10,7 @@ import Combine
 
 struct FeedListViewModelActions {
     let showCreateFeedVC: () -> Void
+    let showFeedDetailVC: (_ feed: Feed) -> Void
 }
 
 final class FeedListViewModel: BaseViewModel {
@@ -83,5 +84,9 @@ final class FeedListViewModel: BaseViewModel {
 
     func showCreateFeedVC() {
         actions.showCreateFeedVC()
+    }
+
+    func showFeedDetailVC(feed: Feed) {
+        actions.showFeedDetailVC(feed)
     }
 }

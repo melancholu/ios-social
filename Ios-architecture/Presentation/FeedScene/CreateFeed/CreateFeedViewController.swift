@@ -34,6 +34,7 @@ class CreateFeedViewController: BaseViewController {
         postButton.accessibilityLabel = String(localized: "PostFeedButtonAccessbilityLabel")
         postButton.accessibilityIdentifier = "PostFeedButton"
     }
+
     @IBAction func onClickPost(_ sender: Any) {
         guard let text = textView.text else { return }
         guard case text.isEmpty = false else {

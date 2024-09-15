@@ -76,6 +76,9 @@
 		AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC804B262A5AAF9B004EB4F2 /* FeedRepository.swift */; };
 		AC8057412AF687B300E0AF5B /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = AC8057402AF687B300E0AF5B /* CombineMoya */; };
 		AC8057432AF687B300E0AF5B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = AC8057422AF687B300E0AF5B /* Moya */; };
+		AC9433782C95A64300D46B79 /* FeedDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9433772C95A64300D46B79 /* FeedDetailViewController.storyboard */; };
+		AC94337A2C95A66900D46B79 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9433792C95A66900D46B79 /* FeedDetailViewController.swift */; };
+		AC94337C2C95A67300D46B79 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94337B2C95A67300D46B79 /* FeedDetailViewModel.swift */; };
 		AC9C397D2A87A9F9004C8B4A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C397C2A87A9F9004C8B4A /* String.swift */; };
 		AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */; };
 		AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */; };
@@ -204,6 +207,9 @@
 		AC804B1C2A5AAB5B004EB4F2 /* FeedRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepositoryProtocol.swift; sourceTree = "<group>"; };
 		AC804B232A5AAD4E004EB4F2 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
 		AC804B262A5AAF9B004EB4F2 /* FeedRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRepository.swift; sourceTree = "<group>"; };
+		AC9433772C95A64300D46B79 /* FeedDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FeedDetailViewController.storyboard; sourceTree = "<group>"; };
+		AC9433792C95A66900D46B79 /* FeedDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewController.swift; sourceTree = "<group>"; };
+		AC94337B2C95A67300D46B79 /* FeedDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedDetailViewModel.swift; sourceTree = "<group>"; };
 		AC9C397C2A87A9F9004C8B4A /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptor.swift; sourceTree = "<group>"; };
 		AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlugin.swift; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 		AC5148532A83C2F800D110B1 /* FeedScene */ = {
 			isa = PBXGroup;
 			children = (
+				AC9433722C95A5B400D46B79 /* FeedDetail */,
 				AC083E002AA3309B00743E58 /* Flow */,
 				AC083DF32AA3136B00743E58 /* CreateFeed */,
 				AC5148562A83C31700D110B1 /* FeedList */,
@@ -609,6 +616,16 @@
 				AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		AC9433722C95A5B400D46B79 /* FeedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AC9433772C95A64300D46B79 /* FeedDetailViewController.storyboard */,
+				AC9433792C95A66900D46B79 /* FeedDetailViewController.swift */,
+				AC94337B2C95A67300D46B79 /* FeedDetailViewModel.swift */,
+			);
+			path = FeedDetail;
 			sourceTree = "<group>";
 		};
 		ACB6FB5C2AED0BD200CB44F6 /* Presentation */ = {
@@ -891,6 +908,7 @@
 				ACF84E1E2A86D3F4000922DA /* FeedCell.xib in Resources */,
 				AC5148612A83C75800D110B1 /* UserListViewController.storyboard in Resources */,
 				ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */,
+				AC9433782C95A64300D46B79 /* FeedDetailViewController.storyboard in Resources */,
 				AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */,
 				ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */,
 				AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */,
@@ -973,6 +991,7 @@
 				ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */,
 				ACD9CE4C2AC8048C00953342 /* BaseRepository.swift in Sources */,
 				AC56EAAC2A9A1C4B00FD2466 /* User.swift in Sources */,
+				AC94337A2C95A66900D46B79 /* FeedDetailViewController.swift in Sources */,
 				AC51485F2A83C39B00D110B1 /* UserListViewModel.swift in Sources */,
 				AC56EAAA2A99FAB900FD2466 /* TabDIContainer.swift in Sources */,
 				AC4A48BE2A7509B8005541B9 /* AppFlowCoordinator.swift in Sources */,
@@ -996,6 +1015,7 @@
 				ACCC53C92AAC7360002081F2 /* AuthFlowCoordinator.swift in Sources */,
 				AC56EAB22A9A1DC000FD2466 /* UserUseCase.swift in Sources */,
 				AC9F17A22AC6EC2A00487038 /* AuthRepositoryProtocol.swift in Sources */,
+				AC94337C2C95A67300D46B79 /* FeedDetailViewModel.swift in Sources */,
 				ACB6A6B92AC84AC800C3EA74 /* TextButton.swift in Sources */,
 				AC51486D2A83C7DA00D110B1 /* FeedListViewModel.swift in Sources */,
 				AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */,
