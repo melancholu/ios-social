@@ -10,8 +10,9 @@ import Foundation
 final class TabDIContainer {
 
     struct Dependencies {
-        let feedRepository: FeedRepository
-        let userRepository: UserRepository
+        let commentRepository: CommentRepositoryProtocol
+        let feedRepository: FeedRepositoryProtocol
+        let userRepository: UserRepositoryProtocol
     }
 
     private let dependencies: Dependencies
@@ -23,6 +24,7 @@ final class TabDIContainer {
     // MARK: - DIContainer
     func makeFeedDIContainer() -> FeedDIContainer {
         let dependencies = FeedDIContainer.Dependencies(
+            commentRepository: dependencies.commentRepository,
             feedRepository: dependencies.feedRepository
         )
 

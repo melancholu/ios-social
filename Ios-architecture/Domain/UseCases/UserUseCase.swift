@@ -17,9 +17,9 @@ protocol UserUseCaseProtocol {
 
 final class UserUseCase: UserUseCaseProtocol {
 
-    private let userRepository: UserRepository
+    private let userRepository: UserRepositoryProtocol
 
-    init(userRepository: UserRepository) {
+    init(userRepository: UserRepositoryProtocol) {
         self.userRepository = userRepository
     }
 

@@ -42,5 +42,12 @@ class FeedDetailViewController: BaseViewController {
     }
 
     @IBAction func onClickReply(_ sender: Any) {
+        guard let text = commentTextField.text else { return }
+        guard case text.isEmpty = false else {
+            showToast(message: "Enter reply")
+            return
+        }
+
+        viewModel.createComment(content: text)
     }
 }
