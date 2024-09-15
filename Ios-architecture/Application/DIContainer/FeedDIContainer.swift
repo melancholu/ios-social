@@ -34,6 +34,13 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
     }
 
     // MARK: - ViewController
+    func makeFeedDetailViewController(actions: FeedDetailViewModelActions, feed: Feed) -> FeedDetailViewController {
+        let viewModel = makeFeedDetailViewModel(actions: actions, feed: feed)
+        let feedDetailVC = FeedDetailViewController.create(with: viewModel)
+
+        return feedDetailVC
+    }
+
     func makeFeedListViewController(actions: FeedListViewModelActions) -> FeedListViewController {
         let viewModel = makeFeedListViewModel(actions: actions)
         let feedListVC = FeedListViewController.create(with: viewModel)
@@ -49,6 +56,12 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
     }
 
     // MARK: - ViewModel
+    func makeFeedDetailViewModel(actions: FeedDetailViewModelActions, feed: Feed) -> FeedDetailViewModel {
+        let feedUseCase = makeFeedUseCase()
+
+        return FeedDetailViewModel(feedUseCase: feedUseCase, actions: actions, feed: feed)
+    }
+
     func makeFeedListViewModel(actions: FeedListViewModelActions) -> FeedListViewModel {
         let feedUseCase = makeFeedUseCase()
 
@@ -60,5 +73,4 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
 
         return CreateFeedViewModel(feedUseCase: feedUseCase, actions: actions)
     }
-
 }

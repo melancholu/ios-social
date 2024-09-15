@@ -27,7 +27,6 @@ class FeedListViewController: BaseViewController {
         tableView.register(UINib(nibName: FeedCell.identifier, bundle: nil), forCellReuseIdentifier: FeedCell.identifier)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.allowsSelection = false
 
         viewModel.getFeeds()
     }
@@ -55,7 +54,13 @@ class FeedListViewController: BaseViewController {
     }
 }
 
-extension FeedListViewController: UITableViewDelegate {}
+extension FeedListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let feed = viewModel.feeds[indexPath.row]
+
+        viewModel.showFeedDetailVC(feed: feed)
+    }
+}
 
 extension FeedListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol FeedFlowCoordinatorDependencies {
+    func makeFeedDetailViewController(actions: FeedDetailViewModelActions, feed: Feed) -> FeedDetailViewController
     func makeFeedListViewController(actions: FeedListViewModelActions) -> FeedListViewController
     func makeCreateFeedViewController(actions: CreateFeedViewModelActions) -> CreateFeedViewController
 }
@@ -25,7 +26,7 @@ final class FeedFlowCoordinator {
     }
 
     func start() {
-        let actions = FeedListViewModelActions(showCreateFeedVC: showCreateFeedVC)
+        let actions = FeedListViewModelActions(showCreateFeedVC: showCreateFeedVC, showFeedDetailVC: showFeedDetailVC)
         let vc = dependencies.makeFeedListViewController(actions: actions)
 
         navigationController?.pushViewController(vc, animated: false)
@@ -40,5 +41,12 @@ final class FeedFlowCoordinator {
 
     func closeCreateFeedVC() {
         navigationController?.popViewController(animated: true)
+    }
+
+    func showFeedDetailVC(feed: Feed) {
+        let actions = FeedDetailViewModelActions()
+        let vc = dependencies.makeFeedDetailViewController(actions: actions, feed: feed)
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
