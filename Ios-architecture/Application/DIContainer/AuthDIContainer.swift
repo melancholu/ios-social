@@ -11,8 +11,8 @@ import UIKit
 final class AuthDIContainer: AuthFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let authRepository: AuthRepository
-        let userRepository: UserRepository
+        let authRepository: AuthRepositoryProtocol
+        let userRepository: UserRepositoryProtocol
     }
 
     private let dependencies: Dependencies

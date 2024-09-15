@@ -131,6 +131,11 @@
 		ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB82A90B77D0097306F /* FeedAPI.swift */; };
 		ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFBD2A90BEDA0097306F /* Env.swift */; };
 		ACE5AFC02A90E4700097306F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFBF2A90E4700097306F /* BaseViewModel.swift */; };
+		ACF449942C96E21A001E36F7 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF449932C96E21A001E36F7 /* Comment.swift */; };
+		ACF449962C96E381001E36F7 /* CommentRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF449952C96E381001E36F7 /* CommentRepositoryProtocol.swift */; };
+		ACF449982C96E3D8001E36F7 /* CommentRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF449972C96E3D8001E36F7 /* CommentRepository.swift */; };
+		ACF4499A2C96E496001E36F7 /* CommentUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF449992C96E496001E36F7 /* CommentUseCase.swift */; };
+		ACF4499C2C96F55B001E36F7 /* CommentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF4499B2C96F55B001E36F7 /* CommentAPI.swift */; };
 		ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF84E132A86C5C6000922DA /* Colors.xcassets */; };
 		ACF84E162A86C672000922DA /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF84E152A86C672000922DA /* UIImage.swift */; };
 		ACF84E182A86C774000922DA /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF84E172A86C774000922DA /* UIColor.swift */; };
@@ -253,6 +258,11 @@
 		ACE5AFBC2A90BC280097306F /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		ACE5AFBD2A90BEDA0097306F /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 		ACE5AFBF2A90E4700097306F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		ACF449932C96E21A001E36F7 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		ACF449952C96E381001E36F7 /* CommentRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepositoryProtocol.swift; sourceTree = "<group>"; };
+		ACF449972C96E3D8001E36F7 /* CommentRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRepository.swift; sourceTree = "<group>"; };
+		ACF449992C96E496001E36F7 /* CommentUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentUseCase.swift; sourceTree = "<group>"; };
+		ACF4499B2C96F55B001E36F7 /* CommentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentAPI.swift; sourceTree = "<group>"; };
 		ACF84E132A86C5C6000922DA /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ACF84E152A86C672000922DA /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		ACF84E172A86C774000922DA /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -564,6 +574,7 @@
 				AC56EA9C2A99C62400FD2466 /* Pagination.swift */,
 				AC9F17A32AC6EE2C00487038 /* Token.swift */,
 				AC56EAAB2A9A1C4A00FD2466 /* User.swift */,
+				ACF449932C96E21A001E36F7 /* Comment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -574,6 +585,7 @@
 				AC9F17A12AC6EC2A00487038 /* AuthRepositoryProtocol.swift */,
 				AC804B1C2A5AAB5B004EB4F2 /* FeedRepositoryProtocol.swift */,
 				AC56EAAF2A9A1D9600FD2466 /* UserRepositoryProtocol.swift */,
+				ACF449952C96E381001E36F7 /* CommentRepositoryProtocol.swift */,
 			);
 			path = Interfaces;
 			sourceTree = "<group>";
@@ -584,6 +596,7 @@
 				ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */,
 				AC56EA9E2A99CE6500FD2466 /* FeedUseCase.swift */,
 				AC56EAB12A9A1DC000FD2466 /* UserUseCase.swift */,
+				ACF449992C96E496001E36F7 /* CommentUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -614,6 +627,7 @@
 				ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */,
 				AC804B262A5AAF9B004EB4F2 /* FeedRepository.swift */,
 				AC56EAB32A9A1DDA00FD2466 /* UserRepository.swift */,
+				ACF449972C96E3D8001E36F7 /* CommentRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -745,6 +759,7 @@
 				ACD9CE4D2AC804A900953342 /* BaseAPI.swift */,
 				ACE5AFB82A90B77D0097306F /* FeedAPI.swift */,
 				AC56EAAD2A9A1CD200FD2466 /* UserAPI.swift */,
+				ACF4499B2C96F55B001E36F7 /* CommentAPI.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -969,6 +984,7 @@
 				AC3CD4EF2ADAD3E40010A1D5 /* AppFlowDelegate.swift in Sources */,
 				AC4A48C32A750A36005541B9 /* AppConfiguration.swift in Sources */,
 				AC56EA9F2A99CE6500FD2466 /* FeedUseCase.swift in Sources */,
+				ACF4499A2C96E496001E36F7 /* CommentUseCase.swift in Sources */,
 				ACF84E232A86D9B5000922DA /* BaseViewController.swift in Sources */,
 				ACA3A7F52A7A8C060056E415 /* TabFlowCoordinator.swift in Sources */,
 				AC083DFD2AA3172400743E58 /* CreateFeedViewController.swift in Sources */,
@@ -980,6 +996,7 @@
 				AC56EAA32A99EE4D00FD2466 /* Constant.swift in Sources */,
 				ACD9CE4E2AC804A900953342 /* BaseAPI.swift in Sources */,
 				ACCC53C52AAC7123002081F2 /* SignUpViewModel.swift in Sources */,
+				ACF449942C96E21A001E36F7 /* Comment.swift in Sources */,
 				ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */,
 				AC5148652A83C79400D110B1 /* SettingViewController.swift in Sources */,
 				AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */,
@@ -997,8 +1014,10 @@
 				AC4A48BE2A7509B8005541B9 /* AppFlowCoordinator.swift in Sources */,
 				AC083DFF2AA3172C00743E58 /* CreateFeedViewModel.swift in Sources */,
 				AC083E022AA330BC00743E58 /* FeedFlowCoordinator.swift in Sources */,
+				ACF4499C2C96F55B001E36F7 /* CommentAPI.swift in Sources */,
 				AC4A48C52A750A5C005541B9 /* AppAppearance.swift in Sources */,
 				AC56EA9D2A99C62400FD2466 /* Pagination.swift in Sources */,
+				ACF449982C96E3D8001E36F7 /* CommentRepository.swift in Sources */,
 				ACF84E212A86D853000922DA /* BaseTableViewCell.swift in Sources */,
 				AC7756612AA356700043F59E /* PrimaryButton.swift in Sources */,
 				ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */,
@@ -1020,6 +1039,7 @@
 				AC51486D2A83C7DA00D110B1 /* FeedListViewModel.swift in Sources */,
 				AC804B272A5AAF9B004EB4F2 /* FeedRepository.swift in Sources */,
 				AC9F17A42AC6EE2C00487038 /* Token.swift in Sources */,
+				ACF449962C96E381001E36F7 /* CommentRepositoryProtocol.swift in Sources */,
 				ACF84E182A86C774000922DA /* UIColor.swift in Sources */,
 				AC51486B2A83C7D300D110B1 /* FeedListViewController.swift in Sources */,
 				AC56EAB42A9A1DDA00FD2466 /* UserRepository.swift in Sources */,

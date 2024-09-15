@@ -9,5 +9,6 @@ import Foundation
 import Combine
 
 protocol FeedRepositoryProtocol {
+    func createFeed(_ feed: Feed) -> AnyPublisher<Feed, Error>
     func getFeeds(_ page: Int) -> AnyPublisher<Pagination<[Feed]>, Error>
 }

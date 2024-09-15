@@ -15,9 +15,9 @@ protocol FeedUseCaseProtocol {
 
 final class FeedUseCase: FeedUseCaseProtocol {
 
-    private let feedRepository: FeedRepository
+    private let feedRepository: FeedRepositoryProtocol
 
-    init(feedRepository: FeedRepository) {
+    init(feedRepository: FeedRepositoryProtocol) {
         self.feedRepository = feedRepository
     }
 

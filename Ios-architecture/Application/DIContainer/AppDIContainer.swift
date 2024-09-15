@@ -11,9 +11,10 @@ final class AppDIContainer {
 
     lazy var appConfiguration = AppConfiguration()
 
-    lazy var authRepository: AuthRepository = AuthRepository()
-    lazy var feedRepository: FeedRepository = FeedRepository()
-    lazy var userRepository: UserRepository = UserRepository()
+    lazy var authRepository: AuthRepositoryProtocol = AuthRepository()
+    lazy var commentRepository: CommentRepositoryProtocol = CommentRepository()
+    lazy var feedRepository: FeedRepositoryProtocol = FeedRepository()
+    lazy var userRepository: UserRepositoryProtocol = UserRepository()
 
     func makeAuthDIContainer() -> AuthDIContainer {
         let dependencies = AuthDIContainer.Dependencies(authRepository: authRepository, userRepository: userRepository)
@@ -23,6 +24,7 @@ final class AppDIContainer {
 
     func makeTabDIContainer() -> TabDIContainer {
         let dependencies = TabDIContainer.Dependencies(
+            commentRepository: commentRepository,
             feedRepository: feedRepository,
             userRepository: userRepository
         )

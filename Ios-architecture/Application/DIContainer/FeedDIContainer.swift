@@ -11,7 +11,8 @@ import UIKit
 final class FeedDIContainer: FeedFlowCoordinatorDependencies {
 
     struct Dependencies {
-        let feedRepository: FeedRepository
+        let commentRepository: CommentRepositoryProtocol
+        let feedRepository: FeedRepositoryProtocol
     }
 
     private let dependencies: Dependencies
@@ -21,6 +22,10 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
     }
 
     // MARK: - UseCase
+    func makeCommentUseCase() -> CommentUseCaseProtocol {
+        return CommentUseCase(commentRepository: dependencies.commentRepository)
+    }
+
     func makeFeedUseCase() -> FeedUseCaseProtocol {
         return FeedUseCase(feedRepository: dependencies.feedRepository)
     }
@@ -57,9 +62,9 @@ final class FeedDIContainer: FeedFlowCoordinatorDependencies {
 
     // MARK: - ViewModel
     func makeFeedDetailViewModel(actions: FeedDetailViewModelActions, feed: Feed) -> FeedDetailViewModel {
-        let feedUseCase = makeFeedUseCase()
+        let commentUseCase = makeCommentUseCase()
 
-        return FeedDetailViewModel(feedUseCase: feedUseCase, actions: actions, feed: feed)
+        return FeedDetailViewModel(commentUseCase: commentUseCase, actions: actions, feed: feed)
     }
 
     func makeFeedListViewModel(actions: FeedListViewModelActions) -> FeedListViewModel {
