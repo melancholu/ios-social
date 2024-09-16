@@ -17,7 +17,7 @@ extension FeedAPI: BaseAPI {
     var path: String {
         switch self {
         case .createFeed: return "/feed/"
-        case .getFeeds: return "/feed"
+        case .getFeeds: return "/feed/"
         }
     }
 

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class FeedDetailViewController: BaseViewController {
 
@@ -16,8 +17,10 @@ class FeedDetailViewController: BaseViewController {
     @IBOutlet weak var commentProfileImageView: UIImageView!
     @IBOutlet weak var commentTextField: UITextField!
     @IBOutlet weak var postButton: PrimaryButton!
+    @IBOutlet weak var tableView: UITableView!
 
     private var viewModel: FeedDetailViewModel!
+    private var subscriptions = Set<AnyCancellable>()
 
     static func create(with viewModel: FeedDetailViewModel) -> FeedDetailViewController {
         let view = FeedDetailViewController.instantiateViewController()
@@ -39,6 +42,31 @@ class FeedDetailViewController: BaseViewController {
         postButton.button.setTitle("Reply", for: .normal)
         postButton.button.addTarget(self, action: #selector(onClickReply(_:)), for: UIControl.Event.touchUpInside)
 
+        tableView.register(UINib(nibName: CommentCell.identifier, bundle: nil), forCellReuseIdentifier: CommentCell.identifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.allowsSelection = false
+
+        viewModel.getComments()
+
+    }
+
+    override func setBindings() {
+        super.setBindings()
+
+        viewModel.$comments
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] _ in
+                self?.tableView.reloadData()
+            })
+            .store(in: &subscriptions)
+    }
+
+    override func setAccessibility() {
+        tableView.accessibilityLabel = String(localized: "CommentTableViewAccessbilityLabel")
+        tableView.accessibilityIdentifier = "CommentTableView"
+        postButton.accessibilityLabel = String(localized: "ReplyButtonAccessbilityLabel")
+        postButton.accessibilityIdentifier = "ReplyButton"
     }
 
     @IBAction func onClickReply(_ sender: Any) {
@@ -49,5 +77,31 @@ class FeedDetailViewController: BaseViewController {
         }
 
         viewModel.createComment(content: text)
+    }
+}
+
+extension FeedDetailViewController: UITableViewDelegate {}
+
+extension FeedDetailViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.comments.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentCell.identifier, for: indexPath) as? CommentCell else {
+            return UITableViewCell()
+        }
+
+        cell.display(comment: viewModel.comments[indexPath.row])
+        cell.accessibilityLabel = viewModel.comments[indexPath.row].content
+        cell.accessibilityIdentifier = viewModel.comments[indexPath.row].content
+
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row > viewModel.comments.count - Constant.PAGINATION_OFFSET {
+            viewModel.loadMore()
+        }
     }
 }
