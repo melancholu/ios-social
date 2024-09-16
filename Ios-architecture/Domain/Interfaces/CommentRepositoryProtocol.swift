@@ -10,4 +10,5 @@ import Combine
 
 protocol CommentRepositoryProtocol {
     func createComment(_ comment: Comment) -> AnyPublisher<Comment, Error>
+    func getComments(_ feedUuid: String, _ page: Int) -> AnyPublisher<Pagination<[Comment]>, Error>
 }

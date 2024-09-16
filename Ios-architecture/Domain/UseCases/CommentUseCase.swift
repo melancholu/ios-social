@@ -10,6 +10,7 @@ import Combine
 
 protocol CommentUseCaseProtocol {
     func createComment(_ comment: Comment) -> AnyPublisher<Comment, Error>
+    func getComments(_ feedUuid: String, _ page: Int) -> AnyPublisher<Pagination<[Comment]>, Error>
 }
 
 final class CommentUseCase: CommentUseCaseProtocol {
@@ -22,5 +23,9 @@ final class CommentUseCase: CommentUseCaseProtocol {
 
     func createComment(_ comment: Comment) -> AnyPublisher<Comment, Error> {
         return commentRepository.createComment(comment)
+    }
+
+    func getComments(_ feedUuid: String, _ page: Int) -> AnyPublisher<Pagination<[Comment]>, Error> {
+        return commentRepository.getComments(feedUuid, page)
     }
 }

@@ -21,4 +21,16 @@ final class CommentRepository: BaseRepository<CommentAPI>, CommentRepositoryProt
         }
         .eraseToAnyPublisher()
     }
+
+    func getComments(_ feedUuid: String, _ page: Int) -> AnyPublisher<Pagination<[Comment]>, Error> {
+        return provider.requestPublisher(.getComments(feedUuid: feedUuid, page: page)).tryMap { response in
+            let decodedData = try response.map(Pagination<[Comment]>.self)
+
+            return decodedData
+        }
+        .mapError { error in
+            return error
+        }
+        .eraseToAnyPublisher()
+    }
 }

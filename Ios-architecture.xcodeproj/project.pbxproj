@@ -125,6 +125,8 @@
 		ACD326122AFF685800A92E5E /* AuthStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCC53CD2AAC773A002081F2 /* AuthStorage.swift */; };
 		ACD326132AFF68C200A92E5E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC56EAAB2A9A1C4A00FD2466 /* User.swift */; };
 		ACD326152AFF72EE00A92E5E /* CreateFeedSceneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD326142AFF72EE00A92E5E /* CreateFeedSceneUITests.swift */; };
+		ACD745012C98258C009BC97C /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD745002C98258C009BC97C /* CommentCell.swift */; };
+		ACD745032C9825D2009BC97C /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD745022C9825D2009BC97C /* CommentCell.xib */; };
 		ACD9CE4C2AC8048C00953342 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */; };
 		ACD9CE4E2AC804A900953342 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4D2AC804A900953342 /* BaseAPI.swift */; };
 		ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
@@ -250,6 +252,8 @@
 		ACCC53CF2AAC7B63002081F2 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
 		ACD3260F2AFF439900A92E5E /* FeedSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSceneUITests.swift; sourceTree = "<group>"; };
 		ACD326142AFF72EE00A92E5E /* CreateFeedSceneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFeedSceneUITests.swift; sourceTree = "<group>"; };
+		ACD745002C98258C009BC97C /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		ACD745022C9825D2009BC97C /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		ACD9CE4D2AC804A900953342 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		ACE5AFB52A90ADF20097306F /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
@@ -790,6 +794,8 @@
 				ACF84E1D2A86D3F4000922DA /* FeedCell.xib */,
 				AC56EAB52A9A266C00FD2466 /* UserCell.swift */,
 				AC56EAB72A9A267700FD2466 /* UserCell.xib */,
+				ACD745002C98258C009BC97C /* CommentCell.swift */,
+				ACD745022C9825D2009BC97C /* CommentCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -924,6 +930,7 @@
 				AC5148612A83C75800D110B1 /* UserListViewController.storyboard in Resources */,
 				ACCC53BD2AAC70F1002081F2 /* SignUpViewController.storyboard in Resources */,
 				AC9433782C95A64300D46B79 /* FeedDetailViewController.storyboard in Resources */,
+				ACD745032C9825D2009BC97C /* CommentCell.xib in Resources */,
 				AC56EAB82A9A267700FD2466 /* UserCell.xib in Resources */,
 				ACF84E142A86C5C6000922DA /* Colors.xcassets in Resources */,
 				AC804AEB2A5AA2FD004EB4F2 /* Assets.xcassets in Resources */,
@@ -1000,6 +1007,7 @@
 				ACCC53BF2AAC710A002081F2 /* LoginViewController.swift in Sources */,
 				AC5148652A83C79400D110B1 /* SettingViewController.swift in Sources */,
 				AC56EAB62A9A266C00FD2466 /* UserCell.swift in Sources */,
+				ACD745012C98258C009BC97C /* CommentCell.swift in Sources */,
 				AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */,
 				AC4A48C82A750F21005541B9 /* Coordinator.swift in Sources */,
 				AC56EAB02A9A1D9600FD2466 /* UserRepositoryProtocol.swift in Sources */,
