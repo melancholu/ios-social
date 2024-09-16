@@ -12,7 +12,7 @@ class FeedListViewModelTests: XCTestCase {
 
     func test_whenCreateFeedSucceed() {
         let feedUseCaseMock = FeedUseCaseMock()
-        let actions = FeedListViewModelActions(showCreateFeedVC: {})
+        let actions = FeedListViewModelActions(showCreateFeedVC: {}, showFeedDetailVC: {_ in })
 
         let viewModel = FeedListViewModel(feedUseCase: feedUseCaseMock, actions: actions)
 
@@ -25,7 +25,7 @@ class FeedListViewModelTests: XCTestCase {
 
     func test_whenCreateFeedFailed() {
         let feedUseCaseMock = FeedUseCaseErrorMock()
-        let actions = FeedListViewModelActions(showCreateFeedVC: {})
+        let actions = FeedListViewModelActions(showCreateFeedVC: {}, showFeedDetailVC: {_ in })
 
         let viewModel = FeedListViewModel(feedUseCase: feedUseCaseMock, actions: actions)
 
