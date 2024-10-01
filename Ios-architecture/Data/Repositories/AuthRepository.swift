@@ -36,7 +36,10 @@ final class AuthRepository: BaseRepository<AuthAPI>, AuthRepositoryProtocol {
     }
 
     func refresh() -> AnyPublisher<Void, Error> {
-        return provider.requestPublisher(.refresh).tryMap { response in
+        let refreshToken = self.authStorage.refreshToken
+        let token = Token(accessToken: nil, refreshToken: refreshToken)
+
+        return provider.requestPublisher(.refresh(token: token)).tryMap { response in
             let decodedData = try response.map(Token.self)
 
             self.authStorage.setToken(decodedData)

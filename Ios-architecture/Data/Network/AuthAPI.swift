@@ -11,7 +11,7 @@ import Moya
 enum AuthAPI {
     case login(user: User)
     case logout
-    case refresh
+    case refresh(token: Token)
 }
 
 extension AuthAPI: BaseAPI {
@@ -41,8 +41,8 @@ extension AuthAPI: BaseAPI {
             return .requestJSONEncodable(user)
         case .logout:
             return .requestPlain
-        case .refresh:
-            return .requestPlain
+        case let .refresh(token):
+            return .requestJSONEncodable(token)
         }
     }
 

@@ -23,13 +23,6 @@ final class NetworkInterceptor: RequestInterceptor {
             return
         }
 
-        if urlRequest.url?.absoluteString.hasSuffix("/refresh") == true, let refreshToken = AuthStorage.shared.refreshToken {
-            var _urlRequest = urlRequest
-            _urlRequest.setValue("Bearer \(refreshToken)", forHTTPHeaderField: "Authorization")
-            completion(.success(_urlRequest))
-            return
-        }
-
         var _urlRequest = urlRequest
         _urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         completion(.success(_urlRequest))
