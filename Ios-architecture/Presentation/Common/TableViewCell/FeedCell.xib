@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,9 +37,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fq1-Po-4Gw">
-                        <rect key="frame" x="16" y="48" width="506" height="64"/>
+                        <rect key="frame" x="16" y="48" width="506" height="32"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" name="gray900"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEz-Md-rXB">
+                        <rect key="frame" x="462.5" y="96" width="16" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="Bvo-Tp-60Q"/>
+                            <constraint firstAttribute="height" constant="16" id="Dlc-k1-org"/>
+                        </constraints>
+                        <color key="tintColor" name="gray500"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" image="icUnlike"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0z-g6-hoO">
+                        <rect key="frame" x="486.5" y="95.5" width="35.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" name="gray800"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -47,18 +64,24 @@
                     <constraint firstItem="A43-7m-8B2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Ua-2L-dOl" secondAttribute="trailing" constant="8" id="3va-Xw-WAX"/>
                     <constraint firstItem="fq1-Po-4Gw" firstAttribute="leading" secondItem="ev5-JQ-zBF" secondAttribute="leading" constant="16" id="6as-Pv-iMX"/>
                     <constraint firstAttribute="trailing" secondItem="fq1-Po-4Gw" secondAttribute="trailing" constant="16" id="Bny-ap-VGm"/>
+                    <constraint firstAttribute="bottom" secondItem="HEz-Md-rXB" secondAttribute="bottom" constant="16" id="DSs-gZ-caJ"/>
                     <constraint firstItem="aS6-jc-rG2" firstAttribute="leading" secondItem="ev5-JQ-zBF" secondAttribute="leading" constant="16" id="Fyj-Rc-wUo"/>
                     <constraint firstItem="fq1-Po-4Gw" firstAttribute="top" secondItem="aS6-jc-rG2" secondAttribute="bottom" constant="8" id="GWo-o1-rHc"/>
                     <constraint firstItem="3Ua-2L-dOl" firstAttribute="centerY" secondItem="aS6-jc-rG2" secondAttribute="centerY" id="J0W-cH-AgJ"/>
+                    <constraint firstItem="HEz-Md-rXB" firstAttribute="top" secondItem="fq1-Po-4Gw" secondAttribute="bottom" constant="16" id="Lxo-KB-n2G"/>
+                    <constraint firstItem="s0z-g6-hoO" firstAttribute="centerY" secondItem="HEz-Md-rXB" secondAttribute="centerY" id="Mfa-MO-h6Y"/>
                     <constraint firstItem="3Ua-2L-dOl" firstAttribute="leading" secondItem="aS6-jc-rG2" secondAttribute="trailing" constant="8" id="bFc-G5-ots"/>
+                    <constraint firstAttribute="trailing" secondItem="s0z-g6-hoO" secondAttribute="trailing" constant="16" id="bbJ-A7-uD6"/>
                     <constraint firstItem="aS6-jc-rG2" firstAttribute="top" secondItem="ev5-JQ-zBF" secondAttribute="top" constant="16" id="izH-ms-uTF"/>
-                    <constraint firstAttribute="bottom" secondItem="fq1-Po-4Gw" secondAttribute="bottom" constant="16" id="sSu-4p-V73"/>
+                    <constraint firstItem="s0z-g6-hoO" firstAttribute="leading" secondItem="HEz-Md-rXB" secondAttribute="trailing" constant="8" id="myw-y5-vcm"/>
                     <constraint firstItem="A43-7m-8B2" firstAttribute="centerY" secondItem="aS6-jc-rG2" secondAttribute="centerY" id="xJk-4M-TtC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="contentLabel" destination="fq1-Po-4Gw" id="Sri-mJ-GTo"/>
                 <outlet property="createdLabel" destination="A43-7m-8B2" id="ygl-VB-1Of"/>
+                <outlet property="likeButton" destination="HEz-Md-rXB" id="wFx-Wo-W3M"/>
+                <outlet property="likeCountLabel" destination="s0z-g6-hoO" id="fj9-cG-0TC"/>
                 <outlet property="nameLabel" destination="3Ua-2L-dOl" id="6G6-iC-lGH"/>
                 <outlet property="profileImageView" destination="aS6-jc-rG2" id="uSF-Gf-gLX"/>
             </connections>
@@ -66,6 +89,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="icUnlike" width="24" height="24"/>
         <namedColor name="gray500">
             <color red="0.61960784313725492" green="0.61960784313725492" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

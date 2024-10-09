@@ -1,59 +1,47 @@
 //
-//  Feed.swift
+//  Like.swift
 //  Ios-architecture
 //
-//  Created by song dong hyeok on 2023/08/19.
+//  Created by song dong hyeok on 10/9/24.
 //
 
-import Combine
-
-struct Feed: Codable, Equatable {
+struct Like: Codable, Equatable {
     enum CodingKeys: String, CodingKey {
         case uuid
+        case feed
         case user
-        case content
         case created
-        case likes
-        case liked
     }
 
     let uuid: String?
+    let feed: Feed?
     let user: User?
-    let content: String?
     let created: String?
-    var likes: Int?
-    var liked: Bool?
 
-    init(content: String) {
+    init(feed: Feed) {
         self.uuid = nil
+        self.feed = feed
         self.user = nil
-        self.content = content
         self.created = nil
-        self.likes = nil
-        self.liked = nil
     }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         uuid = (try? container.decodeIfPresent(String.self, forKey: .uuid))
+        feed = (try? container.decodeIfPresent(Feed.self, forKey: .feed))
         user = (try? container.decodeIfPresent(User.self, forKey: .user))
-        content = (try? container.decodeIfPresent(String.self, forKey: .content))
         created = (try? container.decodeIfPresent(String.self, forKey: .created))
-        likes = (try? container.decodeIfPresent(Int.self, forKey: .likes))
-        liked = (try? container.decodeIfPresent(Bool.self, forKey: .liked))
     }
 
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(uuid, forKey: .uuid)
+        try container.encodeIfPresent(feed, forKey: .feed)
         try container.encodeIfPresent(user, forKey: .user)
-        try container.encodeIfPresent(content, forKey: .content)
         try container.encodeIfPresent(created, forKey: .created)
-        try container.encodeIfPresent(likes, forKey: .likes)
-        try container.encodeIfPresent(liked, forKey: .liked)
     }
 
-    static func == (lhs: Feed, rhs: Feed) -> Bool {
+    static func == (lhs: Like, rhs: Like) -> Bool {
         return lhs.uuid == rhs.uuid
     }
 }
