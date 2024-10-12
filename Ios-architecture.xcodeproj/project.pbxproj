@@ -80,6 +80,7 @@
 		AC94337A2C95A66900D46B79 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9433792C95A66900D46B79 /* FeedDetailViewController.swift */; };
 		AC94337C2C95A67300D46B79 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94337B2C95A67300D46B79 /* FeedDetailViewModel.swift */; };
 		AC9C397D2A87A9F9004C8B4A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C397C2A87A9F9004C8B4A /* String.swift */; };
+		AC9C66022CBA2258000635DD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
 		AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */; };
 		AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */; };
 		AC9F179E2AC6EAE300487038 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F179D2AC6EAE300487038 /* AuthAPI.swift */; };
@@ -1119,6 +1120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD326112AFF685100A92E5E /* Token.swift in Sources */,
+				AC9C66022CBA2258000635DD /* Feed.swift in Sources */,
 				ACDCF5C42CB63E1A00B887FD /* Like.swift in Sources */,
 				ACD326102AFF439900A92E5E /* FeedSceneUITests.swift in Sources */,
 				ACB6FB5F2AED0C0400CB44F6 /* LoginSceneUITests.swift in Sources */,
