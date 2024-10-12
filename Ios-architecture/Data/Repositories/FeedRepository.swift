@@ -33,4 +33,14 @@ final class FeedRepository: BaseRepository<FeedAPI>, FeedRepositoryProtocol {
         }
         .eraseToAnyPublisher()
     }
+
+    func like(_ feed: Feed) -> AnyPublisher<Void, Error> {
+        return provider.requestPublisher(.like(feed: feed)).tryMap { _ in
+            return
+        }
+        .mapError { error in
+            return error
+        }
+        .eraseToAnyPublisher()
+    }
 }

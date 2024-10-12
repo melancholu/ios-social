@@ -7,7 +7,7 @@
 import UIKit
 import Combine
 
-class FeedListViewController: BaseViewController {
+class FeedListViewController: BaseViewController, FeedCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var createButton: UIButton!
@@ -52,6 +52,12 @@ class FeedListViewController: BaseViewController {
     @IBAction func onClickCreateFeed(_ sender: Any) {
         viewModel.showCreateFeedVC()
     }
+
+    func onClickLike(in cell: FeedCell) {
+        if let indexPath = tableView.indexPath(for: cell) {
+            viewModel.onClickLike(index: indexPath.row)
+        }
+    }
 }
 
 extension FeedListViewController: UITableViewDelegate {
@@ -75,6 +81,7 @@ extension FeedListViewController: UITableViewDataSource {
         cell.display(feed: viewModel.feeds[indexPath.row])
         cell.accessibilityLabel = viewModel.feeds[indexPath.row].content
         cell.accessibilityIdentifier = viewModel.feeds[indexPath.row].content
+        cell.delegate = self
 
         return cell
     }

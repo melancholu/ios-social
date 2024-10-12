@@ -80,6 +80,7 @@
 		AC94337A2C95A66900D46B79 /* FeedDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9433792C95A66900D46B79 /* FeedDetailViewController.swift */; };
 		AC94337C2C95A67300D46B79 /* FeedDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC94337B2C95A67300D46B79 /* FeedDetailViewModel.swift */; };
 		AC9C397D2A87A9F9004C8B4A /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9C397C2A87A9F9004C8B4A /* String.swift */; };
+		AC9C66022CBA2258000635DD /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
 		AC9E97652A91D3FB00F86756 /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97642A91D3FB00F86756 /* NetworkInterceptor.swift */; };
 		AC9E97672A91D5EE00F86756 /* NetworkPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9E97662A91D5EE00F86756 /* NetworkPlugin.swift */; };
 		AC9F179E2AC6EAE300487038 /* AuthAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9F179D2AC6EAE300487038 /* AuthAPI.swift */; };
@@ -129,6 +130,9 @@
 		ACD745032C9825D2009BC97C /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACD745022C9825D2009BC97C /* CommentCell.xib */; };
 		ACD9CE4C2AC8048C00953342 /* BaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */; };
 		ACD9CE4E2AC804A900953342 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD9CE4D2AC804A900953342 /* BaseAPI.swift */; };
+		ACDCF5C42CB63E1A00B887FD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF5C32CB63E1A00B887FD /* Like.swift */; };
+		ACDCF5C52CB63E1A00B887FD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF5C32CB63E1A00B887FD /* Like.swift */; };
+		ACDCF5C62CB63E1A00B887FD /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDCF5C32CB63E1A00B887FD /* Like.swift */; };
 		ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB52A90ADF20097306F /* Feed.swift */; };
 		ACE5AFB92A90B77D0097306F /* FeedAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFB82A90B77D0097306F /* FeedAPI.swift */; };
 		ACE5AFBE2A90BEDA0097306F /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE5AFBD2A90BEDA0097306F /* Env.swift */; };
@@ -256,6 +260,7 @@
 		ACD745022C9825D2009BC97C /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
 		ACD9CE4B2AC8048C00953342 /* BaseRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRepository.swift; sourceTree = "<group>"; };
 		ACD9CE4D2AC804A900953342 /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		ACDCF5C32CB63E1A00B887FD /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		ACE5AFB52A90ADF20097306F /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 		ACE5AFB82A90B77D0097306F /* FeedAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAPI.swift; sourceTree = "<group>"; };
 		ACE5AFBB2A90BC0E0097306F /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
@@ -579,6 +584,7 @@
 				AC9F17A32AC6EE2C00487038 /* Token.swift */,
 				AC56EAAB2A9A1C4A00FD2466 /* User.swift */,
 				ACF449932C96E21A001E36F7 /* Comment.swift */,
+				ACDCF5C32CB63E1A00B887FD /* Like.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -1000,6 +1006,7 @@
 				AC804B242A5AAD4E004EB4F2 /* UserDetailViewModel.swift in Sources */,
 				AC56EAA82A99F01800FD2466 /* Loading.swift in Sources */,
 				ACE5AFB62A90ADF20097306F /* Feed.swift in Sources */,
+				ACDCF5C52CB63E1A00B887FD /* Like.swift in Sources */,
 				AC56EAA32A99EE4D00FD2466 /* Constant.swift in Sources */,
 				ACD9CE4E2AC804A900953342 /* BaseAPI.swift in Sources */,
 				ACCC53C52AAC7123002081F2 /* SignUpViewModel.swift in Sources */,
@@ -1099,6 +1106,7 @@
 				ACC0CB652AE3E2A800DD8231 /* UserUseCaseMock.swift in Sources */,
 				AC3CD4E42ADAD0780010A1D5 /* UserRepository.swift in Sources */,
 				AC3CD4C92ADAB70B0010A1D5 /* User.swift in Sources */,
+				ACDCF5C62CB63E1A00B887FD /* Like.swift in Sources */,
 				AC3CD4CC2ADAB7680010A1D5 /* AuthRepositoryProtocol.swift in Sources */,
 				AC3CD4F22ADAD4040010A1D5 /* NetworkPlugin.swift in Sources */,
 				ACC0CB6B2AE3F7B200DD8231 /* SignUpViewModelTests.swift in Sources */,
@@ -1112,6 +1120,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACD326112AFF685100A92E5E /* Token.swift in Sources */,
+				AC9C66022CBA2258000635DD /* Feed.swift in Sources */,
+				ACDCF5C42CB63E1A00B887FD /* Like.swift in Sources */,
 				ACD326102AFF439900A92E5E /* FeedSceneUITests.swift in Sources */,
 				ACB6FB5F2AED0C0400CB44F6 /* LoginSceneUITests.swift in Sources */,
 				ACD326132AFF68C200A92E5E /* User.swift in Sources */,

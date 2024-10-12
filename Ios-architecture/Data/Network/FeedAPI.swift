@@ -11,6 +11,7 @@ import Moya
 enum FeedAPI {
     case createFeed(feed: Feed)
     case getFeeds(page: Int)
+    case like(feed: Feed)
 }
 
 extension FeedAPI: BaseAPI {
@@ -18,6 +19,7 @@ extension FeedAPI: BaseAPI {
         switch self {
         case .createFeed: return "/feed/"
         case .getFeeds: return "/feed/"
+        case .like: return "/feed/like/"
         }
     }
 
@@ -25,6 +27,7 @@ extension FeedAPI: BaseAPI {
         switch self {
         case .createFeed: return .post
         case .getFeeds: return .get
+        case .like: return .post
         }
     }
 
@@ -34,6 +37,8 @@ extension FeedAPI: BaseAPI {
             return .requestJSONEncodable(feed)
         case let .getFeeds(page):
             return .requestParameters(parameters: ["page": page], encoding: URLEncoding.queryString)
+        case let .like(feed):
+            return .requestJSONEncodable(feed)
         }
     }
 
@@ -91,6 +96,8 @@ extension FeedAPI: BaseAPI {
                 }
                 """.utf8
             )
+        case .like:
+            return Data()
         }
     }
 }

@@ -89,4 +89,24 @@ final class FeedListViewModel: BaseViewModel {
     func showFeedDetailVC(feed: Feed) {
         actions.showFeedDetailVC(feed)
     }
+
+    func onClickLike(index: Int) {
+        guard isLoading() else { return }
+
+        feeds[index] = feedUseCase.toggleLike(feeds[index])
+        feeds = feeds
+
+        feedUseCase.like(feeds[index]).sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished:
+                self.setLoading(.completed)
+            case .failure:
+                self.feeds[index] = self.feedUseCase.toggleLike(self.feeds[index])
+                self.feeds = self.feeds
+
+                self.setLoading(.error)
+            }
+        }, receiveValue: { _ in
+        }).store(in: &subscriptions)
+    }
 }
